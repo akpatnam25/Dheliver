@@ -87,8 +87,8 @@ CREATE TABLE "web2py_session_hw2"(
     "session_data" BLOB
 );
 success!
-timestamp: 2018-05-22T14:46:57.395318
-CREATE TABLE "web2py_session_dheliver"(
+timestamp: 2018-05-22T15:33:19.762639
+CREATE TABLE "web2py_session_Dheliver"(
     "id" INTEGER PRIMARY KEY AUTOINCREMENT,
     "locked" CHAR(1),
     "client_ip" CHAR(64),
