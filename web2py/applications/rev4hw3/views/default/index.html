@@ -1,0 +1,159 @@
+{{extend 'layout.html'}}
+
+{{block head}}
+<script src="{{=URL('static', 'js/vue.js')}}"></script>
+<script>
+	var memos_url = "{{=URL('api', 'get_memos')}}";
+    var add_memo_url = "{{=URL('api', 'add_memo', user_signature=True)}}";
+    var edit_memo_url = "{{=URL('api', 'edit_memo', user_signature=True)}}";
+    var delete_memo_url = "{{=URL('api', 'delete_memo', user_signature=True)}}";
+    var toggle_memo_visibility_url = "{{=URL('api', 'toggle_visibility', user_signature=True)}}";
+</script>
+{{end}}
+
+<div class="main_content">
+
+    <div id="vue-div" class="display:none">
+        <!-- Your code goes here.  Remember to call $("#vue-div").show() once you get the data for the first time. -->
+        <div class="main_content">
+
+        	<div v-if="logged_in" class="add_memo_div">
+
+        		<h3 class="add_memo_header">Add Memo</h3>
+        		
+        		<div v-if="adding_memo" class="add_memo_form">
+        			<form action="#" v-on:submit.prevent class="form-horizontal"  enctype="multipart/form-data" method="post">
+        				<div class="form-group" id="no_table_title__row">
+        					<div>
+        						<input class="form-control string" id="no_table_title" v-model="add_form_title" placeholder="Title" type="text" />
+        						<span class="help-block"></span>
+        					</div>
+        				</div>
+        				<div class="form-group" id="no_table_memo__row">
+        					<div>
+        						<textarea class="form-control multiline-string" id="no_table_memo" v-model="add_form_memo" placeholder="Memo Content"></textarea>
+        						<span class="help-block"></span>
+        					</div>
+        				</div>
+        			</form>
+        			<div class="button_list">
+        				<div class="buttons">
+        					<button class="btn rounded" v-on:click="add_memo()">
+        						<i class="fa fa-plus fa-lg"></i> Submit
+        					</button>
+		        			<button class="btn rounded" v-on:click="cancel_add_button()">
+		        				<i class="fa fa-times fa-lg"></i> Cancel
+		        			</button>
+		        		</div>
+		        	</div>
+        		</div>
+        		
+        		<div v-if="!adding_memo" class="add_btn">
+        			<button class="btn rounded" v-on:click="add_memo_button()">
+        				<i class="fa fa-plus"></i> Add
+        			</button>
+        		</div>
+        	</div>
+
+        	<div v-if="!logged_in">
+        		<h1 class="main_title">Welcome!</h1>
+        		
+        		<p class="explaination">This site will help you organize your life by storing your memos. Please log in to use it.</p>
+
+        		<div class="login_button">
+        			<a href="{{=URL('default', 'user')}}" class="btn rounded">Login</a>
+        		</div>
+        	</div>
+
+        	<div class="memos_div">
+
+        		<h3 class="memos_header">Memos</h3>
+        	
+        		<div class="memos">
+
+	        		<div v-for="memo in memos">
+
+	        			<div v-if="memo.id in in_progress_edits" class="edit_memo_form">
+		        			<form action="#" v-on:submit.prevent class="form-horizontal"  enctype="multipart/form-data" method="post">
+		        				<div class="form-group" id="no_table_title__row">
+		        					<div>
+		        						<input class="form-control string" id="no_table_title" v-model="in_progress_edits[memo.id].title" placeholder="Title" type="text" />
+		        						<span class="help-block"></span>
+		        					</div>
+		        				</div>
+		        				<div class="form-group" id="no_table_memo__row">
+		        					<div>
+		        						<textarea class="form-control multiline-string" id="no_table_memo" v-model="in_progress_edits[memo.id].memo" placeholder="Memo Content"></textarea>
+		        						<span class="help-block"></span>
+		        					</div>
+		        				</div>
+		        			</form>
+		        			<div class="button_list">
+		        				<div class="buttons">
+		        					<button class="btn rounded" v-on:click="edit_memo(memo._idx)">
+		        						<i class="fa fa-edit fa-lg"></i> Submit
+		        					</button>
+				        			<button class="btn rounded" v-on:click="cancel_edit_button(memo._idx)">
+				        				<i class="fa fa-times fa-lg"></i> Cancel
+				        			</button>
+				        		</div>
+				        	</div>
+	        			</div>
+
+
+	        			<div v-if="!(memo.id in in_progress_edits)" class="memo">
+		        			<div class="memo_text">
+		        				<div class="memo_title">${memo.title}</div>
+		        				<div class="memo_content">${memo.memo}</div>
+		        			</div>
+
+		        			<div v-if="user_email == memo.user_email" class="memo_owner button_list">
+	        					<div class="memo_owner buttons">
+	        						<button class="btn rounded" v-on:click="edit_memo_button(memo._idx)">
+	        							<i class="fa fa-edit fa-lg"></i>
+	        						</button>
+	        						<button class="btn rounded" v-on:click="delete_memo(memo._idx)">
+	        							<i class="fa fa-trash fa-lg"></i>
+	        						</button>
+	        						<button class="btn rounded" v-on:click="toggle_memo_visibility(memo._idx)">
+	        							<i class="fa fa-users" v-if="memo.is_public"></i>
+	        							<i class="fa fa-user" v-if="!memo.is_public"></i>
+	        						</button>
+	        					</div>
+	        				</div>
+
+	        				<div v-if="user_email != memo.user_email" class="public_memo button_list">
+	        					<div class="buttons">
+	        						<button class="btn rounded disabled" disabled>
+	        							<i class="fa fa-users"></i>
+	        						</button>
+	        					</div>
+	        				</div>
+	        			</div>
+	        		</div>
+	        	</div>
+
+        		<div class="no_memos_prompt" v-if="memos.length == 0">
+        			<p v-if="logged_in">
+        				No memos currently available.<br>
+        				Press the "Add" button above to add one, or click the "Get More Memos" button below to refresh.
+        			</p>
+        			<p v-if="!logged_in">
+        				No public memos currently available.<br>
+        				Click the "Get More Memos" button below to refresh.
+        			</p>
+        		</div>
+
+	        	<div class="get_memos_button_div">
+	        		<button class="get_memos btn rounded" v-on:click="get_more_memos()">
+	        			Get More Memos
+	        		</button>
+	        	</div>
+
+        	</div>
+
+    </div>
+
+</div>
+
+<script src="{{=URL('static', 'js/default_index.js')}}"></script>

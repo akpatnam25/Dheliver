@@ -1,0 +1,93 @@
+.colorful {
+  color: $clrHilight;
+}
+
+div.main_content {
+  padding: 10px;
+}
+
+div.result_table {
+  width: 100%;
+}
+table.track_table {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+button:disabled {
+  background-color: lightgray;
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+td.play_selector {
+  width: 20px;
+}
+
+div.music_controller {
+  width: 100%;
+  margin-bottom: 20px;
+  audio {
+    width: 100%;
+  }
+}
+
+.colorful {
+  color: $clrHilight;
+}
+
+
+
+/*  Memo stuff */
+
+div.add_btn {
+  margin: 5px;
+  a {
+    padding: 10px;
+  }
+}
+
+div.memo {
+  margin: 5px;
+  border: 2px solid gray;
+  padding: 5px;
+
+  div.memo_title {
+    font-weight: bold;
+    font-size: 150%;
+  }
+  div.button_list {
+    text-align: right;
+    div.buttons {
+      display: inline-block;
+    }
+    margin-top: 10px;
+    a.btn {
+      padding: 10px;
+    }
+  }
+}
+
+div.public_memo {
+  margin: 5px;
+  border: 2px solid gray;
+  padding: 5px;
+
+  div.public_memo_title {
+    font-weight: bold;
+    font-size: 150%;
+  }
+  div.public_button_list {
+    text-align: right;
+    div.buttons {
+      display: inline-block;
+      background-color: #484545
+    }
+    margin-top: 10px;
+    a.btn {
+      padding: 10px;
+    }
+  }
+}

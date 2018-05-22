@@ -1,0 +1,199 @@
+{{extend 'layout.html'}}
+
+{{block head}}
+<script src="{{=URL('static', 'js/vue.js')}}"></script>
+<script>
+    var memos_url = "{{=URL('api', 'get_memos')}}";
+    var add_memo_url = "{{=URL('api', 'add_memo', user_signature=True)}}";
+    var del_memo_url = "{{=URL('api', 'delete_memo', user_signature=True)}}";
+    var tog_public_url = "{{=URL('api', 'toggle_public', user_signature=True)}}";
+    var edit_memo_url = "{{=URL('api', 'edit_memo', user_signature=True)}}";
+</script>
+{{end}}
+
+<div class="main_content">
+    
+  <div id="vue-div" class="display:none">
+    <!-- Your code goes here.  Remember to call $("#vue-div").show()
+                           once you get the data for the first time. -->
+    
+    <!-- Display either login button or add memo button -->
+    <!-- If not logged in, display login welcome -->
+    <div v-if="!logged_in">
+      <h1 class="main_title">Welcome!</h1>
+
+      <p class="explanation">This site will help you organize your life by storing your checklists.
+                Please log in to use it.</p>
+
+      <div class="login_button">
+        <a href="{{=URL('default', 'user')}}" class="btn">Login</a>
+      </div>
+    </div>
+    <!-- If logged in, display button to add/cancel memo -->
+    <div v-else>
+      <div class="add_btn">
+        <!-- Buttons based on toggle -->
+        <div v-if="!is_adding_memo">
+          <a class="btn red rounded" v-on:click="add_memo_button()">
+                <i class="fa fa-plus"></i> Add</a>
+        </div>
+        <div v-else>
+          <a class="btn red rounded" v-on:click="add_memo_button()">
+                <i class="fa fa-ban"></i> Cancel</a>
+        </div>
+      </div>
+    </div>
+    
+    
+    <!-- Form to create memo if adding memo -->
+    <div v-if="is_adding_memo" id="add_memo_div">
+      <form action="#" v-on:submit.prevent class="form-horizontal" enctype="multipart/form-data" method="post">
+        <div class="form-group" id="no_table_title__row">
+          <div>
+            <input class="form-control string" id="no_table_title" name="title" v-model="form_title" placeholder="Title" type="text"/>
+            <span class="help-block"></span>
+          </div>
+        </div>
+        <div class="form-group" id="no_table_memo__row">
+          <div>
+            <input class="form-control string" id="no_table_memo" name="memo" v-model="form_memo" placeholder="Memo" type="text"/>
+            <span class="help-block"></span>
+          </div>
+        </div>
+      </form>
+      <!-- Button to submit form -->
+      <a class="btn rounded" v-on:click="add_memo_form()">
+          <i class="fa fa-plus-circle"></i> Save</a>
+    </div>
+    
+    <!-- Memo list -->
+    <div class="memo_list">
+      <div v-for="memo in memos">
+        <!-- Not edditing this memo -->
+        <div v-if="memo._index != selected_id">
+        <div class="memo">
+          <div class="memo_text">
+            <div class="memo_title">${memo.title}</div>
+            <div class="memo_content">${memo.memo}</div>
+          </div>
+          
+          <!-- Display buttons for edit if owned -->
+          {{if auth.user:}}
+          <div v-if="memo.user_email == '{{=auth.user.email}}'">
+            <div>
+              <div class="button_list own">
+                <div class="buttons">
+                
+                  <!-- button to toggle public -->
+                  <a class="btn rounded" v-on:click="toggle_public(memo._index)">
+                    <!-- change icon based on public or private -->
+                    <div v-if="memo.is_public">
+                      <i class="fa fa-users"></i>
+                    </div>
+                    <div v-else>
+                      <i class="fa fa-user"></i>
+                    </div>
+                  </a>
+                  <!-- button to edit -->
+                  <a class="btn rounded" v-on:click="edit_memo_button(memo._index)">
+                    <i class="fa fa-edit fa-lg"></i>
+                  </a>
+                  <!-- button to delete -->
+                  <a class="btn rounded red" v-on:click="delete_memo(memo._index)">
+                    <i class="fa fa-trash fa-lg"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Do not own these memos, grey useless buttons -->
+          <div v-else>
+            <div>
+              <div class="button_list">
+                <div class="buttons">
+                  <a class="btn rounded gray">
+                    <!-- buttont to toggle public -->
+                    <div v-if="memo.is_public">
+                      <i class="fa fa-users"></i>
+                    </div>
+                    <div v-else>
+                      <i class="fa fa-user"></i>
+                    </div>
+                  </a>
+                  <a class="btn rounded gray">
+                    <i class="fa fa-edit fa-lg"></i>
+                  </a>
+                  <a class="btn rounded gray">
+                    <i class="fa fa-trash fa-lg"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          {{else:}}
+          <!-- If not logged in, display grey buttons -->
+          <div>
+            <div class="button_list">
+              <div class="buttons">
+                <a class="btn rounded gray">
+                  <!-- buttont to toggle public -->
+                  <div v-if="memo.is_public">
+                    <i class="fa fa-users"></i>
+                  </div>
+                  <div v-else>
+                    <i class="fa fa-user"></i>
+                  </div>
+                </a>
+                <a class="btn rounded gray">
+                  <i class="fa fa-edit fa-lg"></i>
+                </a>
+                <a class="btn rounded gray">
+                  <i class="fa fa-trash fa-lg"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          {{pass}}
+        </div>
+        </div>
+        <!-- Editting this memo -->
+        <div v-else>
+          {{if auth.user:}}
+            <!-- Form to create memo if adding memo -->
+            <div v-if="memo.user_email == '{{=auth.user.email}}'" id="edit_memo_div">
+              <form action="#" v-on:submit.prevent class="form-horizontal" enctype="multipart/form-data" method="post">
+                <div class="form-group" id="no_table_title__row">
+                  <div>
+                    <input class="form-control string" id="no_table_title" name="title" v-model="edit_title" placeholder="Title" type="text"/>
+                    <span class="help-block"></span>
+                  </div>
+                </div>
+                <div class="form-group" id="no_table_memo__row">
+                  <div>
+                    <input class="form-control string" id="no_table_memo" name="memo" v-model="edit_memo" placeholder="Memo" type="text"/>
+                    <span class="help-block"></span>
+                  </div>
+                </div>
+              </form>
+            </form>
+            <!-- Button to submit form -->
+            <a class="btn rounded" v-on:click="edit_memo_save(memo._index)">
+                <i class="fa fa-check"></i> Save</a>
+            <a class="btn rounded red" v-on:click="cancel_edit_button()">
+                <i class="fa fa-ban"></i> Cancel</a>
+            </div>
+          {{pass}}
+        </div>
+      </div>
+    </div>
+    
+    <div v-if="has_more" class="show_more">
+      <a class="btn rounded" v-on:click="get_more_memos()">
+          <i class="fa fa-plus-square"></i> Show More</a>
+    </div>
+    
+  </div>
+
+</div>
+
+<script src="{{=URL('static', 'js/default_index.js')}}"></script>
