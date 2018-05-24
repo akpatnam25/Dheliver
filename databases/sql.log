@@ -87,3 +87,14 @@ CREATE TABLE "web2py_session_hw2"(
     "session_data" BLOB
 );
 success!
+timestamp: 2018-05-24T15:33:39.806793
+CREATE TABLE "web2py_session_Dheliver"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "locked" CHAR(1),
+    "client_ip" CHAR(64),
+    "created_datetime" TIMESTAMP,
+    "modified_datetime" TIMESTAMP,
+    "unique_key" CHAR(64),
+    "session_data" BLOB
+);
+success!
