@@ -1,0 +1,134 @@
+{{extend 'layout.html'}}
+
+{{block head}}
+<script src="{{=URL('static', 'js/vue.js')}}"></script>
+<script>
+	var my_url = "{{=URL('api', 'my_method')}}";
+	var posts_url = "{{=URL('api', 'get_posts')}}";
+	var add_post_url = "{{=URL('api', 'add_post', user_signature=True)}}";
+	var toggle_post_url = "{{=URL('api', 'toggle_post', user_signature=True)}}";
+	var edit_post_url = "{{=URL('api', 'edit_post', user_signature=True)}}";
+	var del_post_url = "{{=URL('api', 'del_post', user_signature=True)}}";
+</script>
+{{end}}
+
+<div class="main_content" >
+
+	<div id="vue-div" class="display:none" style="padding: 15px;">
+
+			{{if auth.user:}}
+			<div class="button_bar" style="padding-top: 15px;">
+				<button v-if="!is_adding_post" class="btn rounded"  v-on:click="add_post_button()">
+					Add new post
+				</button>
+
+				<button v-if="is_adding_post" class="btn rounded" v-on:click="cancel_add()">
+					Cancel
+				</button>
+			</div>
+
+			<div v-if="is_adding_post">
+				<!-- ADDED INPUT FOR FORM TITLE BELOW -->
+				<div>
+					<textarea class="form-control string" id="no_table_content" v-model="form_title" placeholder="Title" type="text" ></textarea>
+					<span class="help-block"></span>
+				</div>
+				<!-- END OF ADDED INPUT FOR FORM TITLE BELOW   -->
+				<div>
+					<textarea class="form-control string" id="no_table_content" v-model="form_content"  placeholder="Memo" type="text" ></textarea>
+					<span class="help-block"></span>
+				</div>
+
+				<div>
+					<button style="margin-top: 15px;" class="btn rounded" v-on:click="add_post()">
+						Post
+					</button>
+				</div>
+			</div>
+
+
+			<div v-for="post in posts" v-if="post.user_email == '{{=auth.user.email}}'">
+				<div  style="margin: 5px; border: 2px solid gray; padding: 5px;">
+					<!-- GET ALL THE POSTS through a FOR loop-->
+					<!-- Create the div for each post -->
+					<div v-if="editing && edit_id==post.id" >
+
+						<!-- Content that is being edited for a post -->
+						<div class="form-group" id="no_table_content__row">
+							<div>
+								<!-- ADDED NEW TITLE BOX -->
+								<textarea class="form-control string" id="no_table_content" v-model="edit_title = post.title" placeholder="Content" type="text" ></textarea>
+								<span class="help-block"></span>
+								<!-- END OF TITLE BOX -->
+
+								<textarea class="form-control string" id="no_table_content" v-model="edit_content = post.content" placeholder="Content" type="text" ></textarea>
+								<span class="help-block"></span>
+							</div>
+						</div>
+
+
+							<!-- The post and cancel buttond for editing a post -->
+							<div >
+								<div class="form-group row edit-buttons" id="submit_record__row">
+									<button v-if="editing" class="btn btn-primary btn-sm post-edit-button" v-on:click="edit_post_submit()" type="submit">
+										Post
+									</button>
+									<button v-if="editing" class="btn btn-warning btn-sm cancel-button" v-on:click="cancel_edit()" type="button">
+										Cancel
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="memo_text" v-if="!editing || (editing && edit_id != post.id)">
+							<div class="memo_title" style="font-weight: bold; font-size: 150%; margin-bottom: 5px;">${post.title}
+							</div>
+							<div class="memo_content">${post.content}</div>
+						</div>
+						<div class="button_list">
+							<div class="buttons" style="margin-left: 90%;" > 
+								<div  v-if="post.user_email == '{{=auth.user.email}}'" >
+									<div class="btn rounded" v-on:click="edit_post(post.id)" style="padding: 12px;">
+										<i class="fa fa-edit fa-lg" ></i>
+									</div>
+
+									<div class = "btn rounded"  v-on:click="toggle_post(post.id)" style="padding: 12px;"> 
+										<!-- IS IT PUBLIC OR NOT? -->
+										<div v-if="post.is_public">
+											<i class="fa fa-users"></i>
+										</div>
+										<div v-else>
+											<i class="fa fa-user"></i>
+										</div>
+									</div>	
+									<div class="btn rounded" v-on:click="delete_track(post.id)" style="padding: 12px;">	
+										<i class="fa fa-trash-o" ></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				{{pass}}
+				<h4>Public Posts:</h4>
+
+				<div v-for="post in posts" >
+					<div v-if="post.is_public" >
+						<div  style="margin: 5px; border: 2px solid gray; padding: 5px;">
+							<div class="memo_text" v-if="!editing || (editing && edit_id != post.id)">
+								<div class="memo_title" style="font-weight: bold; font-size: 150%; margin-bottom: 5px;">${post.title}
+								</div>
+								<div class="memo_content">${post.content}</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div v-if="has_more" class="show_more">
+					<button id="load-more" class="btn rounded" v-on:click="get_more()">Load more</button>
+				</div>
+			</div>
+
+		</div>
+
+		<script src="{{=URL('static', 'js/default_index.js')}}"></script>

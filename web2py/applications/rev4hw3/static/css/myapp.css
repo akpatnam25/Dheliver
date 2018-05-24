@@ -1,0 +1,108 @@
+.colorful {
+  color: #bb8833;
+}
+
+/* Style for the main_content */
+div.main_content {
+  padding: 10px;
+}
+
+/* Style for the Add Memo Section */
+
+div.add_btn {
+  margin: 5px;
+}
+div.add_btn button {
+  padding: 10px;
+}
+
+div.add_memo_form {
+	margin: 5px;
+	border: 2px solid gray;
+	padding: 5px;
+}
+
+div.add_memo_form input.string {
+	width: 100%;
+}
+
+div.add_memo_form textarea.multiline-string {
+	width: 100%;
+}
+
+
+/* Style for the Memos */
+
+div.memo {
+  margin: 5px;
+  border: 2px solid gray;
+  padding: 5px;
+}
+
+div.memo div.memo_title {
+  font-weight: bold;
+  font-size: 150%;
+}
+
+/*div.memo div.button_list {
+  text-align: right;
+  margin-top: 10px;
+}
+
+div.memo div.button_list div.buttons {
+  display: inline-block;
+}
+
+div.memo div.button_list button.btn {
+  padding: 10px;
+}*/
+
+/* Style for the Edit Memo Forms */
+
+div.edit_memo_form {
+	margin: 5px;
+	border: 2px solid gray;
+	padding: 5px;
+}
+
+div.edit_memo_form input.string {
+	width: 100%;
+}
+
+div.edit_memo_form textarea.multiline-string {
+	width: 100%;
+	font-family: 'Arial';
+}
+
+/* Style for the Get More Memos Button */
+
+div.get_memos_button_div {
+	width: 100%;
+	margin-top: 10px;
+}
+
+div.get_memos_button_div button.btn.get_memos {
+	width: 100%;
+	padding: 10px;
+}
+
+
+/* Style for the Button Lists */
+
+div.button_list {
+	text-align: right;
+	margin-top: 10px;
+}
+
+div.button_list div.buttons {
+	display: inline-block;
+}
+
+div.button_list div.buttons button.btn {
+	padding: 10px;
+}
+
+div.button_list div.buttons button.btn.disabled {
+	background-color: #dcdcdc !important;
+}
+
