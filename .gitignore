@@ -5,3 +5,5 @@ __pycache__/
 *.table
 .DS_Store
 *.log
+errors
+databases
