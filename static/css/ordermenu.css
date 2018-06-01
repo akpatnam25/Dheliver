@@ -7,3 +7,13 @@ div.timeofday{
     margin-top: 5em;
     margin-left: 30em;
 }
+
+div.dhheader{
+    font-size: small;
+    margin-left: 27em;
+}
+
+div.timeheader{
+    font-size: small;
+    margin-left: 27em;
+}
