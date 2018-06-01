@@ -178,7 +178,7 @@
 'There are no plugins': 'Tiada plugin',
 'There are no private files': 'Tiada fail peribadi',
 'These files are not served, they are only available from within your app': 'Fail-fail ini tidak disampaikan, mereka hanya boleh didapati dari dalam aplikasi anda',
-'These files are served without processing, your images go here': 'Ini fail disampaikan tanpa pemprosesan, imej anda di sini',
+'These files are served without processing, your img go here': 'Ini fail disampaikan tanpa pemprosesan, imej anda di sini',
 'This App': 'App Ini',
 'Time in Cache (h:m:s)': 'Waktu di Cache (h: m: s)',
 'Title': 'Judul',

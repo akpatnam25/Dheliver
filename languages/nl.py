@@ -317,7 +317,7 @@
 'There are no static files': 'Er zijn geen statische bestanden',
 'There are no translators, only default language is supported': 'Er zijn geen vertalingen, alleen de standaard taal wordt ondersteund.',
 'There are no views': 'Er zijn geen views',
-'these files are served without processing, your images go here': 'Deze bestanden worden geserveerd zonder verdere verwerking, je afbeeldingen horen hier',
+'these files are served without processing, your img go here': 'Deze bestanden worden geserveerd zonder verdere verwerking, je afbeeldingen horen hier',
 'This App': 'Deze App',
 'This is a copy of the scaffolding application': 'Dit is een kopie van de steiger-applicatie',
 'This is the %(filename)s template': 'Dit is de %(filename)s template',

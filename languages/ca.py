@@ -398,7 +398,7 @@
 'There are no static files': 'No hi ha fitxers estàtics',
 'There are no translators, only default language is supported': 'No hi ha traductors, només el llenguatge per defecte és suportat',
 'There are no views': 'No hi ha vistes',
-'these files are served without processing, your images go here': 'aquests fitxers són servits sense processar, les seves imatges van aquí',
+'these files are served without processing, your img go here': 'aquests fitxers són servits sense processar, les seves imatges van aquí',
 'This App': 'Aquesta Aplicació',
 'This email already has an account': 'Aquest correu electrònic ja té un compte',
 'This is a copy of the scaffolding application': 'Aquesta és una còpia de la aplicació de bastiment',

@@ -411,7 +411,7 @@
 'There are no translators, only default language is supported': 'There are no translators, only default language is supported',
 'There are no views': 'Nejsou vytvořeny žádné šablony (views)',
 'These files are not served, they are only available from within your app': 'Tyto soubory jsou klientům nepřístupné. K dispozici jsou pouze v rámci aplikace.',
-'These files are served without processing, your images go here': 'Tyto soubory jsou servírovány bez přídavné logiky, sem patří např. obrázky.',
+'These files are served without processing, your img go here': 'Tyto soubory jsou servírovány bez přídavné logiky, sem patří např. obrázky.',
 'This App': 'Tato aplikace',
 'This is a copy of the scaffolding application': 'Toto je kopie aplikace skelet.',
 'This is an experimental feature and it needs more testing. If you decide to upgrade you do it at your own risk': 'This is an experimental feature and it needs more testing. If you decide to upgrade you do it at your own risk',

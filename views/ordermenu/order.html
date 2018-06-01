@@ -2,33 +2,29 @@
 
 {{block head}}
 {{end}}
-<link href="/css/ordermenu.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="static/css/ordermenu.css">
 
 <div class="main_content">
 
   <!-- Here goes your main HTML code. -->
     {{if auth.user is not None:}}
-
-    <div class="cowellstevenson">
-        <a class="btn red rounded"><i class="fa fa-plus"></i> Cowell-Stevenson</a>
+    <!--<div class="container">
+        <div class="colleges">
+            <a class="btn red rounded" style="display: square; margin: 5em; margin-left: 3em;"><i class="fa fa-plus"></i> Cowell-Stevenson</a>
+            <a class="btn blue rounded" style="display: square; margin-left: 6em; ><i class="fa fa-plus"></i> Crown-Merill</a>
+            <a class="btn green rounded" style="display: square; margin-left: 9em;><i class="fa fa-plus"></i> College 9-10</a>
+            <a class="btn black rounded" style="display: square; margin-left: 12em;><i class="fa fa-plus"></i> Kresge-Porter</a>
+            <a class="btn yellow rounded" style="display: square; margin-left: 15em;"><i class="fa fa-plus"></i> Oaks-Rachel Carson College</a>
+        </div>
     </div>
 
-    <div class="crownmerill">
-        <a class="btn blue rounded"><i class="fa fa-plus"></i> Crown-Merill</a>
+    -->
+    <div class="container">
+        <div class="cowell">
+            <img src="/img/cowell.jpg" width="75px" height="75px">
+            <button class="btn">Button</button>
+        </div>
     </div>
-
-    <div class="collegenineten">
-        <a class="btn green rounded"><i class="fa fa-plus"></i> College 9-10</a>
-    </div>
-
-    <div class="kresgeporter">
-        <a class="btn black rounded"><i class="fa fa-plus"></i> Kresge-Porter</a>
-    </div>
-
-    <div class="oaksrcc">
-        <a class="btn yellow rounded"><i class="fa fa-plus"></i> Oaks-Rachel Carson College</a>
-    </div>
-
 
 
 

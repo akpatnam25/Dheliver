@@ -234,7 +234,7 @@
 'There are no plugins': 'There are no plugins',
 'There are no private files': 'There are no private files',
 'These files are not served, they are only available from within your app': 'These files are not served, they are only available from within your app',
-'These files are served without processing, your images go here': 'These files are served without processing, your images go here',
+'These files are served without processing, your img go here': 'These files are served without processing, your img go here',
 'This App': 'ဒီ App',
 'This email already has an account': 'ဒီအီးမေးလ်တွင် အကောင့် ရှိပြီး ဖြစ်ပါသည်',
 'Time in Cache (h:m:s)': 'Time in Cache (h:m:s)',

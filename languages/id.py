@@ -230,7 +230,7 @@
 'There are no plugins': 'Tidak ada plugin',
 'There are no private files': 'Tidak ada file pribadi',
 'These files are not served, they are only available from within your app': 'File-file ini tidak dilayani, mereka hanya tersedia dari dalam aplikasi Anda',
-'These files are served without processing, your images go here': 'File-file ini disajikan tanpa pengolahan, gambar Anda di sini',
+'These files are served without processing, your img go here': 'File-file ini disajikan tanpa pengolahan, gambar Anda di sini',
 'This App': 'App Ini',
 'Time in Cache (h:m:s)': 'Waktu di Cache (h: m: s)',
 'To create a plugin, name a file/folder plugin_[name]': 'Untuk membuat sebuah plugin, nama file / folder plugin_ [nama]',

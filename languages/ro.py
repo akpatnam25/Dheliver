@@ -314,7 +314,7 @@
 'There are no static files': 'Nu există fișiere statice',
 'There are no translators, only default language is supported': 'Nu există traduceri, doar limba implicită este suportată',
 'There are no views': 'Nu există vederi',
-'these files are served without processing, your images go here': 'aceste fișiere sunt servite fără procesare, imaginea se plasează acolo',
+'these files are served without processing, your img go here': 'aceste fișiere sunt servite fără procesare, imaginea se plasează acolo',
 'This App': 'Această aplicație',
 'This is a copy of the scaffolding application': 'Aceasta este o copie a aplicației schelet',
 'This is the %(filename)s template': 'Aceasta este șablonul fișierului %(filename)s',

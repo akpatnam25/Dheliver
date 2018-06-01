@@ -351,7 +351,7 @@
 'There are no static files': 'No hay archivos estáticos',
 'There are no translators, only default language is supported': 'No hay traductores, sólo el lenguaje por defecto es soportado',
 'There are no views': 'No hay vistas',
-'these files are served without processing, your images go here': 'estos archivos son servidos sin procesar, sus imágenes van aquí',
+'these files are served without processing, your img go here': 'estos archivos son servidos sin procesar, sus imágenes van aquí',
 'This App': 'Esta Aplicación',
 'This email already has an account': 'Este correo electrónico ya tiene una cuenta',
 'This is a copy of the scaffolding application': 'Esta es una copia de la aplicación de andamiaje',
