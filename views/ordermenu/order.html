@@ -2,10 +2,36 @@
 
 {{block head}}
 {{end}}
+<link href="/css/ordermenu.css" rel="stylesheet" type="text/css"/>
 
 <div class="main_content">
 
   <!-- Here goes your main HTML code. -->
-    <p>this should work</p>
+    {{if auth.user is not None:}}
+
+    <div class="cowellstevenson">
+        <a class="btn red rounded"><i class="fa fa-plus"></i> Cowell-Stevenson</a>
+    </div>
+
+    <div class="crownmerill">
+        <a class="btn blue rounded"><i class="fa fa-plus"></i> Crown-Merill</a>
+    </div>
+
+    <div class="collegenineten">
+        <a class="btn green rounded"><i class="fa fa-plus"></i> College 9-10</a>
+    </div>
+
+    <div class="kresgeporter">
+        <a class="btn black rounded"><i class="fa fa-plus"></i> Kresge-Porter</a>
+    </div>
+
+    <div class="oaksrcc">
+        <a class="btn yellow rounded"><i class="fa fa-plus"></i> Oaks-Rachel Carson College</a>
+    </div>
+
+
+
+
+    {{pass}}
 
 </div>
