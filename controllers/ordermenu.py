@@ -1,7 +1,8 @@
+
 import requests
 import re
 import urllib.request
-from bs4 import BeautifulSoup
+import BeautifulSoup
 
 def index():
     return dict()
