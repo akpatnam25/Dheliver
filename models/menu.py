@@ -2,7 +2,7 @@
 # this file is released under public domain and you can use without limitations
 
 # ----------------------------------------------------------------------------------------------------------------------
-# Customize your APP title, subtitle and menus here
+# Customize your APP title, subtitle and ordermenu here
 # ----------------------------------------------------------------------------------------------------------------------
 
 response.logo = A(B('web', SPAN(2), 'py'), XML('&trade;&nbsp;'),

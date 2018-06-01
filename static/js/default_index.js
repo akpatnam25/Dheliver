@@ -1,4 +1,4 @@
-// This is the js for the default/index.html view.
+// This is the js for the default/order.html view.
 
 var app = function() {
 
