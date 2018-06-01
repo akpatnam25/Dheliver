@@ -2,30 +2,37 @@
 
 {{block head}}
 {{end}}
-<link rel="stylesheet" href="static/css/ordermenu.css">
 
 <div class="main_content">
 
   <!-- Here goes your main HTML code. -->
     {{if auth.user is not None:}}
-    <!--<div class="container">
+    <div class="container">
         <div class="colleges">
-            <a class="btn red rounded" style="display: square; margin: 5em; margin-left: 3em;"><i class="fa fa-plus"></i> Cowell-Stevenson</a>
-            <a class="btn blue rounded" style="display: square; margin-left: 6em; ><i class="fa fa-plus"></i> Crown-Merill</a>
-            <a class="btn green rounded" style="display: square; margin-left: 9em;><i class="fa fa-plus"></i> College 9-10</a>
-            <a class="btn black rounded" style="display: square; margin-left: 12em;><i class="fa fa-plus"></i> Kresge-Porter</a>
-            <a class="btn yellow rounded" style="display: square; margin-left: 15em;"><i class="fa fa-plus"></i> Oaks-Rachel Carson College</a>
+            <a class="btn rounded" style="display: -moz-box;"><i class="fa fa-plus"></i> Cowell-Stevenson</a>
+            <a class="btn rounded" style="display: -moz-box;"><i class="fa fa-plus"></i> Crown-Merill</a>
+            <a class="btn rounded" style="display: -moz-box;"><i class="fa fa-plus"></i> College 9-10</a>
+            <a class="btn rounded" style="display: -moz-box;"><i class="fa fa-plus"></i> Kresge-Porter</a>
+            <a class="btn rounded" style="display: -moz-box;"><i class="fa fa-plus"></i> Oaks-Rachel Carson College</a>
         </div>
     </div>
 
-    -->
+    <div class="container">
+        <div class="timeofday">
+            <a class="btn rounded" style="display: -moz-box;"><i class="fa fa-plus"></i> Breakfast </a>
+            <a class="btn rounded" style="display: -moz-box;"><i class="fa fa-plus"></i> Lunch </a>
+            <a class="btn rounded" style="display: -moz-box;"><i class="fa fa-plus"></i> Dinner </a>
+        </div>
+    </div>
+
+    <!--
     <div class="container">
         <div class="cowell">
-            <img src="/img/cowell.jpg" width="75px" height="75px">
+            <img src="/img/background.jpg" width="75px" height="75px">
             <button class="btn">Button</button>
         </div>
     </div>
-
+    -->
 
 
     {{pass}}
