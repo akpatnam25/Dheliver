@@ -1,5 +1,5 @@
 {{extend 'layout.html'}}
-<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Shadows+Into+Light|Tangerine|Abel" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Shadows+Into+Light|Tangerine|Abel|Oswald" rel="stylesheet">
 
 {{block head}}
 {{end}}
@@ -78,29 +78,57 @@
       </div>
     </div>
     <div class="half">
-      <h5> Created with <i class="fa fa-heart"></i> by Jonathan Kung, Srini Rangarajan, <br> Aravind Patnam, and Timesh Patel</h5>
+      <h5>
+        Created with <i class="fa fa-heart"></i> by Jonathan Kung, Srini Rangarajan,
+        <br> Aravind Patnam, and Timesh Patel
+      </h5>
     </div>
   </div>
 
   <div class="container">
     <div class="quarter">
       <div class = "Padded">
-        </br></br>
+        <br><br>
         <h6 style="font-family: 'Shadows Into Light', serif;">Current UCSC Dining Halls</h6>
         <p style="font-family: 'Abel', serif;">Colleges Nine & Ten Dining Hall</p>
+        <p style="font-family: 'Abel', serif;">
+          &nbsp&nbsp&nbsp&nbsp<i class="fa fa-phone-square"></i> (831) 502-8397
+        </p>
         <p style="font-family: 'Abel', serif;">Cowell/Stevenson Dining Hall</p>
+        <p style="font-family: 'Abel', serif;">
+          &nbsp&nbsp&nbsp&nbsp<i class="fa fa-phone-square"></i> (831) 459-4609
+        </p>
         <p style="font-family: 'Abel', serif;">Crown/Merrill Dining Hall</p>
+        <p style="font-family: 'Abel', serif;">
+          &nbsp&nbsp&nbsp&nbsp<i class="fa fa-phone-square"></i> (831) 459-4619
+        </p>
         <p style="font-family: 'Abel', serif;">Porter/Kresge Dining Hall</p>
+        <p style="font-family: 'Abel', serif;">
+          &nbsp&nbsp&nbsp&nbsp<i class="fa fa-phone-square"></i> (831) 459-4774
+        </p>
         <p style="font-family: 'Abel', serif;">Rachel Carson/Oakes Dining Hall</p>
+        <p style="font-family: 'Abel', serif;">
+          &nbsp&nbsp&nbsp&nbsp<i class="fa fa-phone-square"></i> (831) 459-3547
+        </p>
       </div>
     </div>
 
-    <div class="threequarters">
+    <div class="half">
       <h1 class="" style="font-family: 'Tangerine', serif;">Welcome to Dheliver!</h1>
       <h3 style="font-family: 'Dancing Script', serif;">UCSC's Premier Dining Hall Delivery Service</h3>
 
+      <h5 style="font-family: 'Oswald', serif;">Please begin by logging in.</h5>
       <div class="login_button">
           <a href="{{=URL('default', 'user')}}" class="btn">Login</a>
+      </div>
+    </div>
+
+    <div class="quarter">
+      <div class="box">
+        <img src="http://nutrition.sa.ucsc.edu/Pictures/slideshow1.jpg" align="bottom"/>
+      </div>
+      <div class="box">
+        <img src="http://nutrition.sa.ucsc.edu/Pictures/slideshow4.jpg" align="bottom"/>
       </div>
     </div>
   </div>
