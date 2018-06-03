@@ -1,4 +1,5 @@
 {{extend 'layout.html'}}
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Shadows+Into+Light|Tangerine|Abel" rel="stylesheet">
 
 {{block head}}
 {{end}}
@@ -70,14 +71,39 @@
 
   {{else:}}
 
-   <h1 class="main_title">Welcome to Dheliver!</h1>
-
-    <p class="explanation">(Insert Description here)
-        Please log in to use it.</p>
-
-    <div class="login_button">
-        <a href="{{=URL('default', 'user')}}" class="btn">Login</a>
+  <div class="container">
+    <div class="quarter">
+      <div class="box">
+        <img src="https://eis-blog.soe.ucsc.edu/wp-content/uploads/2015/06/ucsc-stack.jpg" width="200" height="65" align="bottom"/>
+      </div>
     </div>
+    <div class="half">
+      <h5> Created with <i class="fa fa-heart"></i> by Jonathan Kung, Srini Rangarajan, <br> Aravind Patnam, and Timesh Patel</h5>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="quarter">
+      <div class = "Padded">
+        </br></br>
+        <h6 style="font-family: 'Shadows Into Light', serif;">Current UCSC Dining Halls</h6>
+        <p style="font-family: 'Abel', serif;">Colleges Nine & Ten Dining Hall</p>
+        <p style="font-family: 'Abel', serif;">Cowell/Stevenson Dining Hall</p>
+        <p style="font-family: 'Abel', serif;">Crown/Merrill Dining Hall</p>
+        <p style="font-family: 'Abel', serif;">Porter/Kresge Dining Hall</p>
+        <p style="font-family: 'Abel', serif;">Rachel Carson/Oakes Dining Hall</p>
+      </div>
+    </div>
+
+    <div class="threequarters">
+      <h1 class="" style="font-family: 'Tangerine', serif;">Welcome to Dheliver!</h1>
+      <h3 style="font-family: 'Dancing Script', serif;">UCSC's Premier Dining Hall Delivery Service</h3>
+
+      <div class="login_button">
+          <a href="{{=URL('default', 'user')}}" class="btn">Login</a>
+      </div>
+    </div>
+  </div>
 
     {{for pl in publists:}}
     {{if pl.is_public==True:}}
