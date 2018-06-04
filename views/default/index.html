@@ -8,145 +8,132 @@
 
   <!-- Here goes your main HTML code. -->
   {{if auth.user is not None:}}
-
-  <div class="add_btn">
-    <a class="btn red rounded" href="{{=URL('default', 'add')}}"><i class="fa fa-plus"></i> Add</a>
-  </div>
-
-  {{for cl in checklists:}}
-      <div class="memo">
-        <div class="memo_text">
-          <div class="memo_title">{{=cl.title}}</div>
-          <div class="memo_content">{{=cl.memo}}</div>
+      <div class="container">
+        <div class="quarter">
+          <div class="box">
+            <img src="https://eis-blog.soe.ucsc.edu/wp-content/uploads/2015/06/ucsc-stack.jpg" width="200" height="65" align="bottom"/>
+          </div>
         </div>
-        <div>
-          <div class="button_list">
-            <div class="buttons">
-              <a class="btn rounded" href="{{=URL('default', 'edit', args=[cl.id])}}">
-                <i class="fa fa-edit fa-lg"></i>
-              </a>
-              <a class="btn rounded red" href="{{=URL('default', 'delete', args=[cl.id], user_signature=True)}}">
-                <i class="fa fa-trash fa-lg"></i>
-              </a>
-                 {{if cl.is_public == True:}}
-                    <a class="btn rounded" href="{{=URL('default', 'togglePublic', args=[cl.id])}}">
-                          <i class="fa fa-users"></i>
-                    </a>
-                 {{pass}}
-                {{if cl.is_public == False:}}
-                   <a class="btn rounded" href="{{=URL('default', 'togglePublic', args=[cl.id])}}">
-                          <i class="fa fa-user"></i>
-                    </a>
-                 {{pass}}
-            </div>
+        <div class="half">
+          <h5>
+            Created with <span style="color: #e25555;"><i class="fa fa-heart"></i></span> by Jonathan Kung, Srini Rangarajan,
+            <br> Aravind Patnam, and Timesh Patel
+          </h5>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="quarter">
+          <div class = "Padded">
+            <br><br>
+            <h6 style="font-family: 'Shadows Into Light', serif;">Current UCSC Dining Halls</h6>
+            <p style="font-family: 'Abel', serif;">Colleges Nine & Ten Dining Hall</p>
+            <p style="font-family: 'Abel', serif;">
+              &nbsp&nbsp&nbsp&nbsp<i class="fa fa-phone-square"></i> (831) 502-8397
+            </p>
+            <p style="font-family: 'Abel', serif;">Cowell/Stevenson Dining Hall</p>
+            <p style="font-family: 'Abel', serif;">
+              &nbsp&nbsp&nbsp&nbsp<i class="fa fa-phone-square"></i> (831) 459-4609
+            </p>
+            <p style="font-family: 'Abel', serif;">Crown/Merrill Dining Hall</p>
+            <p style="font-family: 'Abel', serif;">
+              &nbsp&nbsp&nbsp&nbsp<i class="fa fa-phone-square"></i> (831) 459-4619
+            </p>
+            <p style="font-family: 'Abel', serif;">Porter/Kresge Dining Hall</p>
+            <p style="font-family: 'Abel', serif;">
+              &nbsp&nbsp&nbsp&nbsp<i class="fa fa-phone-square"></i> (831) 459-4774
+            </p>
+            <p style="font-family: 'Abel', serif;">Rachel Carson/Oakes Dining Hall</p>
+            <p style="font-family: 'Abel', serif;">
+              &nbsp&nbsp&nbsp&nbsp<i class="fa fa-phone-square"></i> (831) 459-3547
+            </p>
+          </div>
+        </div>
+
+        <div class="half">
+          <h1 class="" style="font-family: 'Tangerine', serif;">Welcome to Dheliver!</h1>
+          <h3 style="font-family: 'Dancing Script', serif;">UCSC's Premier Dining Hall Delivery Service</h3>
+
+          <h5 style="font-family: 'Oswald', serif;">Click here to begin your order</h5>
+          <div class="login_button">
+              <a href="{{=URL('default', 'order')}}" class="btn">Order</a>
+          </div>
+        </div>
+
+        <div class="quarter">
+          <div class="box">
+            <img src="http://nutrition.sa.ucsc.edu/Pictures/slideshow1.jpg" align="bottom"/>
+          </div>
+          <div class="box">
+            <img src="http://nutrition.sa.ucsc.edu/Pictures/slideshow4.jpg" align="bottom"/>
           </div>
         </div>
       </div>
-  {{pass}}
-
-    {{for pl in publists:}}
-    {{if pl.is_public == True:}}
-    {{if pl.user_email != auth.user.email:}}
-      <div class="memo">
-        <div class="memo_text">
-          <div class="memo_title">{{=pl.title}}</div>
-          <div class="memo_content">{{=pl.memo}}</div>
-        </div>
-        <div>
-          <div class="button_list">
-            <div class="buttons">
-                 {{pass}}
-            </div>
-          </div>
-        </div>
-      </div>
-  {{pass}}
-  {{pass}}
-
-  {{if not checklists:}}
-
-    <p>You don't have any checklist.  Press on the Add button above to create one.</p>
-
-  {{pass}}
 
   {{else:}}
 
-  <div class="container">
-    <div class="quarter">
-      <div class="box">
-        <img src="https://eis-blog.soe.ucsc.edu/wp-content/uploads/2015/06/ucsc-stack.jpg" width="200" height="65" align="bottom"/>
-      </div>
-    </div>
-    <div class="half">
-      <h5>
-        Created with <span style="color: #e25555;"><i class="fa fa-heart"></i></span> by Jonathan Kung, Srini Rangarajan,
-        <br> Aravind Patnam, and Timesh Patel
-      </h5>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="quarter">
-      <div class = "Padded">
-        <br><br>
-        <h6 style="font-family: 'Shadows Into Light', serif;">Current UCSC Dining Halls</h6>
-        <p style="font-family: 'Abel', serif;">Colleges Nine & Ten Dining Hall</p>
-        <p style="font-family: 'Abel', serif;">
-          &nbsp&nbsp&nbsp&nbsp<i class="fa fa-phone-square"></i> (831) 502-8397
-        </p>
-        <p style="font-family: 'Abel', serif;">Cowell/Stevenson Dining Hall</p>
-        <p style="font-family: 'Abel', serif;">
-          &nbsp&nbsp&nbsp&nbsp<i class="fa fa-phone-square"></i> (831) 459-4609
-        </p>
-        <p style="font-family: 'Abel', serif;">Crown/Merrill Dining Hall</p>
-        <p style="font-family: 'Abel', serif;">
-          &nbsp&nbsp&nbsp&nbsp<i class="fa fa-phone-square"></i> (831) 459-4619
-        </p>
-        <p style="font-family: 'Abel', serif;">Porter/Kresge Dining Hall</p>
-        <p style="font-family: 'Abel', serif;">
-          &nbsp&nbsp&nbsp&nbsp<i class="fa fa-phone-square"></i> (831) 459-4774
-        </p>
-        <p style="font-family: 'Abel', serif;">Rachel Carson/Oakes Dining Hall</p>
-        <p style="font-family: 'Abel', serif;">
-          &nbsp&nbsp&nbsp&nbsp<i class="fa fa-phone-square"></i> (831) 459-3547
-        </p>
-      </div>
-    </div>
-
-    <div class="half">
-      <h1 class="" style="font-family: 'Tangerine', serif;">Welcome to Dheliver!</h1>
-      <h3 style="font-family: 'Dancing Script', serif;">UCSC's Premier Dining Hall Delivery Service</h3>
-
-      <h5 style="font-family: 'Oswald', serif;">Please begin by logging in.</h5>
-      <div class="login_button">
-          <a href="{{=URL('default', 'user')}}" class="btn">Login</a>
-      </div>
-    </div>
-
-    <div class="quarter">
-      <div class="box">
-        <img src="http://nutrition.sa.ucsc.edu/Pictures/slideshow1.jpg" align="bottom"/>
-      </div>
-      <div class="box">
-        <img src="http://nutrition.sa.ucsc.edu/Pictures/slideshow4.jpg" align="bottom"/>
-      </div>
-    </div>
-  </div>
-
-    {{for pl in publists:}}
-    {{if pl.is_public==True:}}
-      <div class="memo">
-        <div class="memo_text">
-          <div class="memo_title">{{=pl.title}}</div>
-          <div class="memo_content">{{=pl.memo}}</div>
+      <div class="container">
+        <div class="quarter">
+          <div class="box">
+            <img src="https://eis-blog.soe.ucsc.edu/wp-content/uploads/2015/06/ucsc-stack.jpg" width="200" height="65" align="bottom"/>
+          </div>
         </div>
-        <div>
-          <div class="button_list">
+        <div class="half">
+          <h5>
+            Created with <span style="color: #e25555;"><i class="fa fa-heart"></i></span> by Jonathan Kung, Srini Rangarajan,
+            <br> Aravind Patnam, and Timesh Patel
+          </h5>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="quarter">
+          <div class = "Padded">
+            <br><br>
+            <h6 style="font-family: 'Shadows Into Light', serif;">Current UCSC Dining Halls</h6>
+            <p style="font-family: 'Abel', serif;">Colleges Nine & Ten Dining Hall</p>
+            <p style="font-family: 'Abel', serif;">
+              &nbsp&nbsp&nbsp&nbsp<i class="fa fa-phone-square"></i> (831) 502-8397
+            </p>
+            <p style="font-family: 'Abel', serif;">Cowell/Stevenson Dining Hall</p>
+            <p style="font-family: 'Abel', serif;">
+              &nbsp&nbsp&nbsp&nbsp<i class="fa fa-phone-square"></i> (831) 459-4609
+            </p>
+            <p style="font-family: 'Abel', serif;">Crown/Merrill Dining Hall</p>
+            <p style="font-family: 'Abel', serif;">
+              &nbsp&nbsp&nbsp&nbsp<i class="fa fa-phone-square"></i> (831) 459-4619
+            </p>
+            <p style="font-family: 'Abel', serif;">Porter/Kresge Dining Hall</p>
+            <p style="font-family: 'Abel', serif;">
+              &nbsp&nbsp&nbsp&nbsp<i class="fa fa-phone-square"></i> (831) 459-4774
+            </p>
+            <p style="font-family: 'Abel', serif;">Rachel Carson/Oakes Dining Hall</p>
+            <p style="font-family: 'Abel', serif;">
+              &nbsp&nbsp&nbsp&nbsp<i class="fa fa-phone-square"></i> (831) 459-3547
+            </p>
+          </div>
+        </div>
+
+        <div class="half">
+          <h1 class="" style="font-family: 'Tangerine', serif;">Welcome to Dheliver!</h1>
+          <h3 style="font-family: 'Dancing Script', serif;">UCSC's Premier Dining Hall Delivery Service</h3>
+
+          <h5 style="font-family: 'Oswald', serif;">Please begin by logging in.</h5>
+          <div class="login_button">
+              <a href="{{=URL('default', 'user')}}" class="btn">Login</a>
+          </div>
+        </div>
+
+        <div class="quarter">
+          <div class="box">
+            <img src="http://nutrition.sa.ucsc.edu/Pictures/slideshow1.jpg" align="bottom"/>
+          </div>
+          <div class="box">
+            <img src="http://nutrition.sa.ucsc.edu/Pictures/slideshow4.jpg" align="bottom"/>
           </div>
         </div>
       </div>
-  {{pass}}
-  {{pass}}
+
   {{pass}}
 
 </div>
