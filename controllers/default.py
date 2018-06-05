@@ -31,7 +31,7 @@ def index():
 def no_swearing(form):
     if 'fool' in form.vars.memo:
         form.errors.memo = T('No swearing please')
-        
+
 @auth.requires_login()
 def add():
     """Adds a checklist."""
@@ -138,4 +138,6 @@ def about():
 
     return dict()
 
+def checkout():
 
+    return dict()    
