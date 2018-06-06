@@ -6,6 +6,7 @@
 <!-- Adapted from Stripe Elements Quickstart -->
 
 <html>
+<link href="{{=URL('static','css/stripe.css')}}" rel="stylesheet" type="text/css"/>
 <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
 <meta content="utf-8" http-equiv="encoding">
 <form action="/charge" method="post" id="payment-form">
@@ -21,7 +22,7 @@
     <div id="card-errors" role="alert"></div>
   </div>
 
-  <button>Submit Payment</button>
+  <stripebutton>Submit Payment</stripebutton>
 </form>
   <script src="https://js.stripe.com/v3/"></script>
   <script src="{{=URL('static', 'js/stripe.js')}}"></script>
