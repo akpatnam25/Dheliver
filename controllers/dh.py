@@ -262,4 +262,7 @@ lunchArray_rcc=[x.lower() for x in lunchArray_rcc]
 dinnerArray_rcc=[x.lower() for x in dinnerArray_rcc]
 lateNightArray_rcc=[x.lower() for x in lateNightArray_rcc]
 
+new_path = '//Users/srini/Documents/CMPS183/web2py/applications/Dheliver/resources/dRCC.txt'
+new_days = open(new_path,'w')
+new_days.write(str(dinnerArray_rcc))
 print (dinnerArray_rcc)
