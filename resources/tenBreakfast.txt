@@ -1,0 +1,1 @@
+['breakfast', 'cage free scrambled eggs', 'crispy bacon', 'soyrizo tofu scramble', 'blueberry pancakes', 'potato, sundried tomato and bacon frittata', 'oatmeal gluten-free', 'tator tots', 'cake donut', 'mocha chip muffin', 'pumpkin pecan muffin', 'vegan granola nut', 'cage free omelette bar']

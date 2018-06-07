@@ -1,0 +1,1 @@
+['chorizo breakfast burrito', 'eggbeaters scramble', 'flour tortilla', 'hard-boiled cage free eggs', 'hash brown patty', 'mexican chorizo sausage', 'soyrizo tofu scramble']

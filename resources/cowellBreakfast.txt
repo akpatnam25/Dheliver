@@ -1,0 +1,1 @@
+['breakfast', 'belgian waffles', 'cage free scrambled eggs', 'crispy bacon', 'eggbeaters scramble', 'english muffin, egg & bacon sandwich', 'hard-boiled cage free eggs', 'oatmeal gluten-free', 'soyrizo tofu scramble', 'tator tots', 'steamed rice', 'cake donut', 'mocha chip muffin', 'pumpkin pecan muffin', 'vegan granola nut', 'cage free omelette bar']
