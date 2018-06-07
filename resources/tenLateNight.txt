@@ -1,1 +1,1 @@
-['chicken noodle soup', 'french fries', 'oven roasted chicken thigh', 'pineapple tofu curry', 'rice fried vegetable', 'greek pizza', 'steamed rice', 'chicken tenders', 'condiments', 'hearty beef chili', 'mac and cheese bar']
+['los cabos chipotle beef', 'oven roasted chicken thigh', 'condiments', 'mexican rice', 'steamed rice', 'sweet potato fries', 'bar indian', 'basmati rice pullao', 'channa masala', 'condiments', 'madras chicken']

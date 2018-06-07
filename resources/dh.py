@@ -263,62 +263,62 @@ lunchArray_rcc=[x.lower() for x in lunchArray_rcc]
 dinnerArray_rcc=[x.lower() for x in dinnerArray_rcc]
 lateNightArray_rcc=[x.lower() for x in lateNightArray_rcc]
 
-writer = open('../Dheliver/resources/cowellBreakfast.txt','w')
+writer = open('cowellBreakfast.txt','w')
 writer.write(str(breakfastArray_cowell)+'\n')
 
-writer = open('../Dheliver/resources/cowellLunch.txt','w')
+writer = open('cowellLunch.txt','w')
 writer.write(str(lunchArray_cowell)+'\n')
 
-writer = open('../Dheliver/resources/cowellDinner.txt','w')
+writer = open('cowellDinner.txt','w')
 writer.write(str(dinnerArray_cowell)+'\n')
 
-writer = open('../Dheliver/resources/cowellLateNight.txt','w')
+writer = open('cowellLateNight.txt','w')
 writer.write(str(lateNightArray_cowell)+'\n')
 
-writer = open('../Dheliver/resources/merillBreakfast.txt','w')
+writer = open('merillBreakfast.txt','w')
 writer.write(str(breakfastArray_merill)+'\n')
 
-writer = open('../Dheliver/resources/merillLunch.txt','w')
+writer = open('merillLunch.txt','w')
 writer.write(str(lunchArray_merill)+'\n')
 
-writer = open('../Dheliver/resources/merillDinner.txt','w')
+writer = open('merillDinner.txt','w')
 writer.write(str(dinnerArray_merill)+'\n')
 
-writer = open('../Dheliver/resources/merillLateNight.txt','w')
+writer = open('merillLateNight.txt','w')
 writer.write(str(lateNightArray_merill)+'\n')
 
-writer = open('../Dheliver/resources/tenBreakfast.txt','w')
+writer = open('tenBreakfast.txt','w')
 writer.write(str(breakfastArray_ten)+'\n')
 
-writer = open('../Dheliver/resources/tenLunch.txt','w')
+writer = open('tenLunch.txt','w')
 writer.write(str(lunchArray_ten)+'\n')
 
-writer = open('../Dheliver/resources/tenDinner.txt','w')
+writer = open('tenDinner.txt','w')
 writer.write(str(dinnerArray_ten)+'\n')
 
-writer = open('../Dheliver/resources/tenLateNight.txt','w')
+writer = open('tenLateNight.txt','w')
 writer.write(str(lateNightArray_ten)+'\n')
 
-writer = open('../Dheliver/resources/porterBreakfast.txt','w')
+writer = open('porterBreakfast.txt','w')
 writer.write(str(breakfastArray_porter)+'\n')
 
-writer = open('../Dheliver/resources/porterLunch.txt','w')
+writer = open('porterLunch.txt','w')
 writer.write(str(lunchArray_porter)+'\n')
 
-writer = open('../Dheliver/resources/porterDinner.txt','w')
+writer = open('porterDinner.txt','w')
 writer.write(str(dinnerArray_porter)+'\n')
 
-writer = open('../Dheliver/resources/porterLateNight.txt','w')
+writer = open('porterLateNight.txt','w')
 writer.write(str(lateNightArray_porter)+'\n')
 
-writer = open('../Dheliver/resources/rccBreakfast.txt','w')
+writer = open('rccBreakfast.txt','w')
 writer.write(str(breakfastArray_rcc)+'\n')
 
-writer = open('../Dheliver/resources/rccLunch.txt','w')
+writer = open('rccLunch.txt','w')
 writer.write(str(lunchArray_rcc)+'\n')
 
-writer = open('../Dheliver/resources/rccDinner.txt','w')
+writer = open('rccDinner.txt','w')
 writer.write(str(dinnerArray_rcc)+'\n')
 
-writer = open('../Dheliver/resources/rccLateNight.txt','w')
+writer = open('rccLateNight.txt','w')
 writer.write(str(lateNightArray_rcc)+'\n')
