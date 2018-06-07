@@ -41,3 +41,9 @@ div.memo div.button_list div.buttons {
 div.memo div.button_list a.btn {
   padding: 10px;
 }
+
+div.image{
+position: relative;
+   bottom: 550px;
+   left:960px;
+}

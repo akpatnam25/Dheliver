@@ -140,4 +140,10 @@ def about():
 
 def checkout():
 
-    return dict()    
+    return dict()
+
+def faq():
+    return dict()
+
+def deliver():
+    return dict()
