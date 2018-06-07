@@ -1,6 +1,5 @@
-import parseDh
 def getCowellBreakFast():
-    f = open('../Dheliver/resources/cowellBreakfast.txt','r')
+    f = open('cowellBreakfast.txt','r')
     message = f.read()
     strMessage = str(message)
     finalStr = ""
@@ -11,11 +10,11 @@ def getCowellBreakFast():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-    print words
+    return dict(cowellBreakfast=words)
 
 
 def getCowellLunch():
-    f = open('../Dheliver/resources/cowellLunch.txt','r')
+    f = open('cowellLunch.txt','r')
     message = f.read()
     strMessage = str(message)
     finalStr = ""
@@ -26,12 +25,12 @@ def getCowellLunch():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-    print words
+    return dict(cowellLunch=words)
 
 
 
 def getCowellDinner():
-    f = open('../Dheliver/resources/cowellDinner.txt','r')
+    f = open('cowellDinner.txt','r')
     message = f.read()
     strMessage = str(message)
     finalStr = ""
@@ -42,11 +41,11 @@ def getCowellDinner():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-    print words
+   return dict(cowellDinner=words)
 
 
 def getCowellLateNight():
-    f = open('../Dheliver/resources/cowellLateNight.txt','r')
+    f = open('cowellLateNight.txt','r')
     message = f.read()
     strMessage = str(message)
     finalStr = ""
@@ -57,11 +56,11 @@ def getCowellLateNight():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-    print words
+    return dict(cowellLateNight=words)
 
 
 def getMerillBreakfast():
-    f = open('../Dheliver/resources/merillBreakfast.txt','r')
+    f = open('merillBreakfast.txt','r')
     message = f.read()
     strMessage = str(message)
     finalStr = ""
@@ -72,11 +71,11 @@ def getMerillBreakfast():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-    print words
+    return dict(merillBreakfast=words)
 
 
 def getMerillLunch():
-    f = open('../Dheliver/resources/merillLunch.txt','r')
+    f = open('merillLunch.txt','r')
     message = f.read()
     strMessage = str(message)
     finalStr = ""
@@ -87,10 +86,10 @@ def getMerillLunch():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-    print words
+    return dict(merillLunch=words)
 
 def getMerillDinner():
-    f = open('../Dheliver/resources/merillDinner.txt','r')
+    f = open('merillDinner.txt','r')
     message = f.read()
     strMessage = str(message)
     finalStr = ""
@@ -101,10 +100,10 @@ def getMerillDinner():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-    print words
+    return dict(merillDinner=words)
 
 def getMerillLateNight():
-    f = open('../Dheliver/resources/merillLateNight.txt','r')
+    f = open('merillLateNight.txt','r')
     message = f.read()
     strMessage = str(message)
     finalStr = ""
@@ -115,10 +114,10 @@ def getMerillLateNight():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-    print words
+    return dict(merillLateNight=words)
 
 def getPorterBreakfast():
-    f = open('../Dheliver/resources/porterBreakfast.txt','r')
+    f = open('porterBreakfast.txt','r')
     message = f.read()
     strMessage = str(message)
     finalStr = ""
@@ -129,10 +128,10 @@ def getPorterBreakfast():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-    print words
+    return dict(porterBreakfast=words)
 
 def getPorterLunch():
-    f = open('../Dheliver/resources/porterLunch.txt','r')
+    f = open('porterLunch.txt','r')
     message = f.read()
     strMessage = str(message)
     finalStr = ""
@@ -143,10 +142,10 @@ def getPorterLunch():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-    print words
+    return dict(porterLunch=words)
 
 def getPorterDinner():
-    f = open('../Dheliver/resources/porterDinner.txt','r')
+    f = open('porterDinner.txt','r')
     message = f.read()
     strMessage = str(message)
     finalStr = ""
@@ -157,11 +156,11 @@ def getPorterDinner():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-    print words
+    return dict(porterDinner=words)
 
 
 def getPorterLateNight():
-    f = open('../Dheliver/resources/porterLateNight.txt','r')
+    f = open('porterLateNight.txt','r')
     message = f.read()
     strMessage = str(message)
     finalStr = ""
@@ -172,11 +171,11 @@ def getPorterLateNight():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-    print words
+    return dict(porterLateNight=words)
 
 
 def getRccBreakfast():
-    f = open('../Dheliver/resources/rccBreakfast.txt','r')
+    f = open('rccBreakfast.txt','r')
     message = f.read()
     strMessage = str(message)
     finalStr = ""
@@ -187,11 +186,11 @@ def getRccBreakfast():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-    print words
+    return dict(rccBreakfast=words)
 
 
 def getRccLunch():
-    f = open('../Dheliver/resources/rccLunch.txt','r')
+    f = open('rccLunch.txt','r')
     message = f.read()
     strMessage = str(message)
     finalStr = ""
@@ -202,11 +201,11 @@ def getRccLunch():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-    print words
+    return dict(rccLunch=words)
 
 
 def getRccDinner():
-    f = open('../Dheliver/resources/rccDinner.txt','r')
+    f = open('rccDinner.txt','r')
     message = f.read()
     strMessage = str(message)
     finalStr = ""
@@ -217,11 +216,11 @@ def getRccDinner():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-    print words
+    return dict(rccDinner=words)
 
 
 def getRccLateNight():
-    f = open('../Dheliver/resources/rccLateNight.txt','r')
+    f = open('rccLateNight.txt','r')
     message = f.read()
     strMessage = str(message)
     finalStr = ""
@@ -232,11 +231,11 @@ def getRccLateNight():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-    print words
+    return dict(rccLateNight=words)
 
 
 def getTenBreakfast():
-    f = open('../Dheliver/resources/tenBreakfast.txt','r')
+    f = open('tenBreakfast.txt','r')
     message = f.read()
     strMessage = str(message)
     finalStr = ""
@@ -247,11 +246,11 @@ def getTenBreakfast():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-    print words
+    return dict(tenBreakfast=words)
 
 
 def getTenLunch():
-    f = open('../Dheliver/resources/tenLunch.txt','r')
+    f = open('tenLunch.txt','r')
     message = f.read()
     strMessage = str(message)
     finalStr = ""
@@ -262,11 +261,11 @@ def getTenLunch():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-    print words
+    return dict(tenLunch=words)
 
 
 def getTenDinner():
-    f = open('../Dheliver/resources/tenDinner.txt','r')
+    f = open('tenDinner.txt','r')
     message = f.read()
     strMessage = str(message)
     finalStr = ""
@@ -277,11 +276,11 @@ def getTenDinner():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-    print words
+    return dict(tenDinner=words)
 
 
 def getTenLateNight():
-    f = open('../Dheliver/resources/tenLateNight.txt','r')
+    f = open('tenLateNight.txt','r')
     message = f.read()
     strMessage = str(message)
     finalStr = ""
@@ -292,4 +291,4 @@ def getTenLateNight():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-    print words
+    return dict(tenLateNight=words)
