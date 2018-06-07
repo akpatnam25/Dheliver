@@ -30,7 +30,7 @@ CSS Sheet taken from Stripe Elements Quickstart
     float: left;
 }
 
-button {
+stripebutton {
     border: none;
     border-radius: 4px;
     outline: none;
