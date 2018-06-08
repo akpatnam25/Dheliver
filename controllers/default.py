@@ -43,6 +43,9 @@ def add():
         session.flash = T('Please correct the info')
     return dict(form=form)
 
+def test():
+    print "HELLO"
+
 @auth.requires_login()
 @auth.requires_signature()
 def delete():
@@ -147,3 +150,337 @@ def faq():
 
 def deliver():
     return dict()
+
+
+import os
+def get_menu():
+    if request.vars.location == "cowell":
+        if request.vars.time == "breakfast":
+            return getCowellBreakFast()
+        elif request.vars.time == "lunch":
+            return getCowellLunch()
+        else:
+            return getCowellDinner()
+    elif request.vars.location == "crown":
+        if request.vars.time == "breakfast":
+            return getMerillBreakfast()
+        elif request.vars.time == "lunch":
+            return getMerillLunch()
+        else:
+            return getMerillDinner()
+    elif request.vars.location == "ten":
+        if request.vars.time == "breakfast":
+            return getTenBreakfast()
+        elif request.vars.time == "lunch":
+            return getTenLunch()
+        else:
+            return getTenDinner()
+    elif request.vars.location == "porter":
+        if request.vars.time == "breakfast":
+            return getPorterBreakfast()
+        elif request.vars.time == "lunch":
+            return getPorterLunch()
+        else:
+            return getPorterDinner()
+    else:
+        if request.vars.time == "breakfast":
+            return getRccBreakfast()
+        elif request.vars.time == "lunch":
+            return getRccLunch()
+        else:
+            return getRccDinner()
+
+
+def getCowellBreakFast():
+    infile = open(os.path.join(request.folder, 'controllers', 'cowellBreakfast.txt'))
+    message = infile.read()
+    strMessage = str(message)
+    finalStr = ""
+    for i in range(len(strMessage)-3):
+        if strMessage[i].isalpha() :
+            finalStr += strMessage[i]
+        else:
+            finalStr += " "
+    words = finalStr.split("    ")
+    words[0] = words[0].replace(" ", "")
+    return words
+
+
+def getCowellLunch():
+    infile = open(os.path.join(request.folder, 'controllers', 'cowellLunch.txt'))
+    message = infile.read()
+    strMessage = str(message)
+    finalStr = ""
+    for i in range(len(strMessage)-3):
+        if strMessage[i].isalpha() :
+            finalStr += strMessage[i]
+        else:
+            finalStr += " "
+    words = finalStr.split("    ")
+    words[0] = words[0].replace(" ", "")
+    return words
+
+
+def getCowellDinner():
+    infile = open(os.path.join(request.folder, 'controllers', 'cowellDinner.txt'))
+    message = infile.read()
+    strMessage = str(message)
+    finalStr = ""
+    for i in range(len(strMessage)-3):
+        if strMessage[i].isalpha() :
+            finalStr += strMessage[i]
+        else:
+            finalStr += " "
+    words = finalStr.split("    ")
+    words[0] = words[0].replace(" ", "")
+    return words
+
+
+def getCowellLateNight():
+    infile = open(os.path.join(request.folder, 'controllers', 'cowellLateNight.txt'))
+    message = infile.read()
+    strMessage = str(message)
+    finalStr = ""
+    for i in range(len(strMessage)-3):
+        if strMessage[i].isalpha() :
+            finalStr += strMessage[i]
+        else:
+            finalStr += " "
+    words = finalStr.split("    ")
+    words[0] = words[0].replace(" ", "")
+    return words
+
+
+def getMerillBreakfast():
+    infile = open(os.path.join(request.folder, 'controllers', 'merillBreakfast.txt'))
+    message = infile.read()
+    strMessage = str(message)
+    finalStr = ""
+    for i in range(len(strMessage)-3):
+        if strMessage[i].isalpha() :
+            finalStr += strMessage[i]
+        else:
+            finalStr += " "
+    words = finalStr.split("    ")
+    words[0] = words[0].replace(" ", "")
+    return words
+
+
+def getMerillLunch():
+    infile = open(os.path.join(request.folder, 'controllers', 'merillLunch.txt'))
+    message = infile.read()
+    strMessage = str(message)
+    finalStr = ""
+    for i in range(len(strMessage)-3):
+        if strMessage[i].isalpha() :
+            finalStr += strMessage[i]
+        else:
+            finalStr += " "
+    words = finalStr.split("    ")
+    words[0] = words[0].replace(" ", "")
+    return words
+
+def getMerillDinner():
+    infile = open(os.path.join(request.folder, 'controllers', 'merillDinner.txt'))
+    message = infile.read()
+    strMessage = str(message)
+    finalStr = ""
+    for i in range(len(strMessage)-3):
+        if strMessage[i].isalpha() :
+            finalStr += strMessage[i]
+        else:
+            finalStr += " "
+    words = finalStr.split("    ")
+    words[0] = words[0].replace(" ", "")
+    return words
+
+def getMerillLateNight():
+    infile = open(os.path.join(request.folder, 'controllers', 'merillLateNight.txt'))
+    message = infile.read()
+    strMessage = str(message)
+    finalStr = ""
+    for i in range(len(strMessage)-3):
+        if strMessage[i].isalpha() :
+            finalStr += strMessage[i]
+        else:
+            finalStr += " "
+    words = finalStr.split("    ")
+    words[0] = words[0].replace(" ", "")
+    return words
+
+def getPorterBreakfast():
+    infile = open(os.path.join(request.folder, 'controllers', 'porterBreakfast.txt'))
+    message = infile.read()
+    strMessage = str(message)
+    finalStr = ""
+    for i in range(len(strMessage)-3):
+        if strMessage[i].isalpha() :
+            finalStr += strMessage[i]
+        else:
+            finalStr += " "
+    words = finalStr.split("    ")
+    words[0] = words[0].replace(" ", "")
+    return words
+
+def getPorterLunch():
+    infile = open(os.path.join(request.folder, 'controllers', 'porterLunch.txt'))
+    message = infile.read()
+    strMessage = str(message)
+    finalStr = ""
+    for i in range(len(strMessage)-3):
+        if strMessage[i].isalpha() :
+            finalStr += strMessage[i]
+        else:
+            finalStr += " "
+    words = finalStr.split("    ")
+    words[0] = words[0].replace(" ", "")
+    return words
+
+def getPorterDinner():
+    infile = open(os.path.join(request.folder, 'controllers', 'porterDinner.txt'))
+    message = infile.read()
+    strMessage = str(message)
+    finalStr = ""
+    for i in range(len(strMessage)-3):
+        if strMessage[i].isalpha() :
+            finalStr += strMessage[i]
+        else:
+            finalStr += " "
+    words = finalStr.split("    ")
+    words[0] = words[0].replace(" ", "")
+    return words
+
+
+def getPorterLateNight():
+    infile = open(os.path.join(request.folder, 'controllers', 'porterLateNight.txt'))
+    message = infile.read()
+    strMessage = str(message)
+    finalStr = ""
+    for i in range(len(strMessage)-3):
+        if strMessage[i].isalpha() :
+            finalStr += strMessage[i]
+        else:
+            finalStr += " "
+    words = finalStr.split("    ")
+    words[0] = words[0].replace(" ", "")
+    return words
+
+
+def getRccBreakfast():
+    infile = open(os.path.join(request.folder, 'controllers', 'rccBreakfast.txt'))
+    message = infile.read()
+    strMessage = str(message)
+    finalStr = ""
+    for i in range(len(strMessage)-3):
+        if strMessage[i].isalpha() :
+            finalStr += strMessage[i]
+        else:
+            finalStr += " "
+    words = finalStr.split("    ")
+    words[0] = words[0].replace(" ", "")
+    return words
+
+
+def getRccLunch():
+    infile = open(os.path.join(request.folder, 'controllers', 'rccLunch.txt'))
+    message = infile.read()
+    strMessage = str(message)
+    finalStr = ""
+    for i in range(len(strMessage)-3):
+        if strMessage[i].isalpha() :
+            finalStr += strMessage[i]
+        else:
+            finalStr += " "
+    words = finalStr.split("    ")
+    words[0] = words[0].replace(" ", "")
+    return words
+
+
+def getRccDinner():
+    infile = open(os.path.join(request.folder, 'controllers', 'rccDinner.txt'))
+    message = infile.read()
+    strMessage = str(message)
+    finalStr = ""
+    for i in range(len(strMessage)-3):
+        if strMessage[i].isalpha() :
+            finalStr += strMessage[i]
+        else:
+            finalStr += " "
+    words = finalStr.split("    ")
+    words[0] = words[0].replace(" ", "")
+    return words
+
+
+def getRccLateNight():
+    infile = open(os.path.join(request.folder, 'controllers', 'rccLateNight.txt'))
+    message = infile.read()
+    strMessage = str(message)
+    finalStr = ""
+    for i in range(len(strMessage)-3):
+        if strMessage[i].isalpha() :
+            finalStr += strMessage[i]
+        else:
+            finalStr += " "
+    words = finalStr.split("    ")
+    words[0] = words[0].replace(" ", "")
+    return words
+
+
+def getTenBreakfast():
+    infile = open(os.path.join(request.folder, 'controllers', 'tenBreakfast.txt'))
+    message = infile.read()
+    strMessage = str(message)
+    finalStr = ""
+    for i in range(len(strMessage)-3):
+        if strMessage[i].isalpha() :
+            finalStr += strMessage[i]
+        else:
+            finalStr += " "
+    words = finalStr.split("    ")
+    words[0] = words[0].replace(" ", "")
+    return words
+
+
+def getTenLunch():
+    infile = open(os.path.join(request.folder, 'controllers', 'tenLunch.txt'))
+    message = infile.read()
+    strMessage = str(message)
+    finalStr = ""
+    for i in range(len(strMessage)-3):
+        if strMessage[i].isalpha() :
+            finalStr += strMessage[i]
+        else:
+            finalStr += " "
+    words = finalStr.split("    ")
+    words[0] = words[0].replace(" ", "")
+    return words
+
+
+def getTenDinner():
+    infile = open(os.path.join(request.folder, 'controllers', 'tenDinner.txt'))
+    message = infile.read()
+    strMessage = str(message)
+    finalStr = ""
+    for i in range(len(strMessage)-3):
+        if strMessage[i].isalpha() :
+            finalStr += strMessage[i]
+        else:
+            finalStr += " "
+    words = finalStr.split("    ")
+    words[0] = words[0].replace(" ", "")
+    return words
+
+
+def getTenLateNight():
+    infile = open(os.path.join(request.folder, 'controllers', 'tenLateNight.txt'))
+    message = infile.read()
+    strMessage = str(message)
+    finalStr = ""
+    for i in range(len(strMessage)-3):
+        if strMessage[i].isalpha() :
+            finalStr += strMessage[i]
+        else:
+            finalStr += " "
+    words = finalStr.split("    ")
+    words[0] = words[0].replace(" ", "")
+    return words

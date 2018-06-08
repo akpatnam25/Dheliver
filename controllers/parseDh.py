@@ -10,7 +10,8 @@ def getCowellBreakFast():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-    return dict(cowellBreakfast=words)
+    print "AK IS DUMB"
+    return dict(menu=words)
 
 
 def getCowellLunch():
@@ -25,7 +26,7 @@ def getCowellLunch():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-    return dict(cowellLunch=words)
+    return dict(menu=words)
 
 
 
@@ -41,7 +42,7 @@ def getCowellDinner():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-   return dict(cowellDinner=words)
+   return dict(menu=words)
 
 
 def getCowellLateNight():
@@ -56,7 +57,7 @@ def getCowellLateNight():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-    return dict(cowellLateNight=words)
+    return dict(menu=words)
 
 
 def getMerillBreakfast():
@@ -71,7 +72,7 @@ def getMerillBreakfast():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-    return dict(merillBreakfast=words)
+    return dict(menu=words)
 
 
 def getMerillLunch():
@@ -86,7 +87,7 @@ def getMerillLunch():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-    return dict(merillLunch=words)
+    return dict(menu=words)
 
 def getMerillDinner():
     f = open('merillDinner.txt','r')
@@ -100,7 +101,7 @@ def getMerillDinner():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-    return dict(merillDinner=words)
+    return dict(menu=words)
 
 def getMerillLateNight():
     f = open('merillLateNight.txt','r')
@@ -114,7 +115,7 @@ def getMerillLateNight():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-    return dict(merillLateNight=words)
+    return dict(menu=words)
 
 def getPorterBreakfast():
     f = open('porterBreakfast.txt','r')
@@ -128,7 +129,7 @@ def getPorterBreakfast():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-    return dict(porterBreakfast=words)
+    return dict(menu=words)
 
 def getPorterLunch():
     f = open('porterLunch.txt','r')
@@ -142,7 +143,7 @@ def getPorterLunch():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-    return dict(porterLunch=words)
+    return dict(menu=words)
 
 def getPorterDinner():
     f = open('porterDinner.txt','r')
@@ -156,7 +157,7 @@ def getPorterDinner():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-    return dict(porterDinner=words)
+    return dict(menu=words)
 
 
 def getPorterLateNight():
@@ -171,7 +172,7 @@ def getPorterLateNight():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-    return dict(porterLateNight=words)
+    return dict(menu=words)
 
 
 def getRccBreakfast():
@@ -186,7 +187,7 @@ def getRccBreakfast():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-    return dict(rccBreakfast=words)
+    return dict(menu=words)
 
 
 def getRccLunch():
@@ -201,7 +202,7 @@ def getRccLunch():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-    return dict(rccLunch=words)
+    return dict(menu=words)
 
 
 def getRccDinner():
@@ -216,7 +217,7 @@ def getRccDinner():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-    return dict(rccDinner=words)
+    return dict(menu=words)
 
 
 def getRccLateNight():
@@ -231,7 +232,7 @@ def getRccLateNight():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-    return dict(rccLateNight=words)
+    return dict(menu=words)
 
 
 def getTenBreakfast():
@@ -246,7 +247,7 @@ def getTenBreakfast():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-    return dict(tenBreakfast=words)
+    return dict(menu=words)
 
 
 def getTenLunch():
@@ -261,7 +262,7 @@ def getTenLunch():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-    return dict(tenLunch=words)
+    return dict(menu=words)
 
 
 def getTenDinner():
@@ -276,7 +277,7 @@ def getTenDinner():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-    return dict(tenDinner=words)
+    return dict(menu=words)
 
 
 def getTenLateNight():
@@ -291,4 +292,4 @@ def getTenLateNight():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-    return dict(tenLateNight=words)
+    return dict(menu=words)

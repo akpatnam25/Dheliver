@@ -2,11 +2,16 @@
         <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Shadows+Into+Light|Tangerine|Abel|Oswald" rel="stylesheet">
         <link rel="stylesheet" href="/Dheliver/static/css/order_menu.css" />
 {{block head}}
+<script src="{{=URL('static', 'js/vue.js')}}"></script>
+<script src="{{=URL('static', 'js/default_index.js')}}"></script>
+<script>
+    var get_menu_url = "{{=URL('default', 'get_menu')}}";
+</script>
 {{end}}
 
 <div class="main_content">
-
   <!-- Here goes your main HTML code. -->
+  <div id="vue-div" style="display:none">
     {{if auth.user is not None:}}
     <center>
         <h2 style="font-family: 'Shadows Into Light', serif;">Chose a Dining Hall!</h2>
@@ -26,6 +31,11 @@
                 Rachel Carson & Oakes
             </h6>
         </div>
+        <div v-if="show === true">
+          <tr class = "center" v-for="item in menu">
+              <td>${item}</td>
+          </tr>
+        </div>
     </div>
 <!--
     <div class="container">
@@ -36,18 +46,19 @@
     <div class="container">
         <div class="college_dh">
 
-            <input type="image" name="cowell" value="cowell" alt="Cowell & Stevenson"
+            <input type="image" v-on:click="log_location" name="cowell" alt="Cowell & Stevenson"
                    src="https://i.pinimg.com/originals/e7/32/e2/e732e2cbdd27dc014d912513a15a6f75.jpg" style="width:17%;height:27%;margin-left:5%;">
-            <input type="image" name="crown" value="crown" alt="Crown & Merill"
+
+            <input type="image" v-on:click="log_location" name="crown" alt="Crown & Merill"
                    src="https://dining.ucsc.edu/grocery/images/bananajoes.jpg" style="width:17%;height:27%;" >
 
-            <input type="image" name="ten" value="ten" alt="College 9 & College 10"
+            <input type="image" v-on:click="log_location" name="ten" alt="College 9 & College 10"
                    src="https://pbs.twimg.com/media/DctTOTRVMAAPMaM.jpg" style="width:17%;height:27%;">
 
-            <input type="image" name="porter" value="porter" alt="Kresge & Porter"
+            <input type="image" v-on:click="log_location" name="porter" alt="Kresge & Porter"
                    src="https://porter.ucsc.edu/images/hungry-slug.jpg" style="width:17%;height:27%;">
 
-            <input type="image" name="rcc" value="rcc" alt="Rachel Carson & Oaks"
+            <input type="image" v-on:click="log_location" name="rcc" alt="Rachel Carson & Oaks"
                    src="https://housing.ucsc.edu/guide/rachelcarson/images/04.jpg" style="width:17%;height:27%;">
 
         </div>
@@ -68,11 +79,11 @@
         </div>
     <div class="container">
         <div class="time_of_day">
-            <input type="image" name="breakfast" value="breakfast" alt="Breakfast"
+            <input type="image" v-on:click="log_time" name="breakfast" alt="Breakfast"
                    src="https://d9hyo6bif16lx.cloudfront.net/live/img/production/detail/menu/breakfast_breakfast-classics_big-two-do-breakfast.jpg" style="width:17%;height:27%;margin-left:29em;">
-            <input type="image" name="lunch" value="lunch" alt="Lunch"
+            <input type="image" v-on:click="log_time" name="lunch" alt="Lunch"
                    src="https://media2.s-nbcnews.com/i/newscms/2017_39/1285107/school-lunchbox-today-170926-tease_9393858e7b7086103aa4414ae528f88b.jpg" style="width:17%;height:27%;">
-            <input type="image" name="dinner" value="dinner" alt="Dinner"
+            <input type="image" v-on:click="log_time" name="dinner" alt="Dinner"
                    src="https://www.budgetbytes.com/wp-content/uploads/2018/01/Sheet-Pan-BBQ-Meatloaf-Dinner-plate.jpg" style="width:225px;height:200px;">
         </div>
     </div>
@@ -82,7 +93,6 @@
     </h6>
 
 
-
-
     {{pass}}
+  </div>
 </div>

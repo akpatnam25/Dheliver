@@ -13,19 +13,52 @@ var app = function() {
         }
     };
 
+    // Enumerates an array.
+    var enumerate = function(v) {
+        var k=0;
+        return v.map(function(e) {e._idx = k++;});
+    };
+
+    self.log_location = function (event) {
+        self.vue.location = event.target.name;
+        console.log(self.vue.location);
+    };
+
+    self.log_time = function (event) {
+        self.vue.time = event.target.name;
+        console.log(self.vue.time);
+        console.log("SENDING");
+        $.post(get_menu_url,
+            {
+              location: self.vue.location,
+              time: self.vue.time
+            },
+            function (data){
+              self.vue.menu = data;
+              console.log(self.vue.menu);
+              self.vue.show = true;
+        })
+    };
+
     // Complete as needed.
     self.vue = new Vue({
         el: "#vue-div",
         delimiters: ['${', '}'],
         unsafeDelimiters: ['!{', '}'],
         data: {
+          location: null,
+          time: null,
+          menu: [],
+          show: false
         },
         methods: {
+          log_location: self.log_location,
+          log_time: self.log_time,
         }
 
     });
 
-
+    $("#vue-div").show();
     return self;
 };
 
