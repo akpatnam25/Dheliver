@@ -17,15 +17,8 @@ def index():
     if you need a simple wiki simply replace the two lines below with:
     return auth.wiki()
     """
-    logger.info('The session is: %r' % session)
-    checklists = None
-    if auth.user is not None:
-        checklists = db(db.checklist.user_email == auth.user.email).select()
-        publists = db().select(db.checklist.ALL)
-    else:
-        checklists = db().select(db.checklist.ALL)
-        publists = checklists
-    return dict(checklists=checklists, publists=publists)
+
+    return dict()
 
 
 def no_swearing(form):
@@ -134,8 +127,7 @@ def call():
     return service()
 
 def order():
-
-    return dict()
+    return dict(checklists=getCowellBreakFast())
 
 def about():
 
