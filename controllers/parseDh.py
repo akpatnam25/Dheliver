@@ -42,7 +42,7 @@ def getCowellDinner():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-   return dict(menu=words)
+    return dict(menu=words)
 
 
 def getCowellLateNight():
