@@ -156,7 +156,8 @@ def faq():
     return dict()
 
 def deliveries():
-    return dict()
+    publists = {"69","asdf","tasdf"}
+    return dict(publists=publists)
 
 
 
