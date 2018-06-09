@@ -24,20 +24,58 @@ var app = function() {
         console.log(self.vue.location);
     };
 
-    self.log_time = function (event) {
+    self.log_time = function (event){
         self.vue.time = event.target.name;
-        console.log(self.vue.time);
-        console.log("SENDING");
-        $.post(get_menu_url,
-            {
-              location: self.vue.location,
-              time: self.vue.time
-            },
-            function (data){
-              self.vue.menu = data;
-              console.log(self.vue.menu);
-              self.vue.show = true;
-        })
+        if (self.vue.location === 'cowell'){
+          self.vue.cowell = true;
+          self.vue.crown = false;
+          self.vue.ten = false;
+          self.vue.porter = false;
+          self.vue.rcc = false;
+        }
+        else if (self.vue.location === 'crown'){
+          self.vue.cowell = false;
+          self.vue.crown = true;
+          self.vue.ten = false;
+          self.vue.porter = false;
+          self.vue.rcc = false;
+        }
+        else if (self.vue.location === 'ten'){
+          self.vue.cowell = false;
+          self.vue.crown = false;
+          self.vue.ten = true;
+          self.vue.porter = false;
+          self.vue.rcc = false;
+        }
+        else if (self.vue.location === 'porter'){
+          self.vue.cowell = false;
+          self.vue.crown = false;
+          self.vue.ten = false;
+          self.vue.porter = true;
+          self.vue.rcc = false;
+        }
+        else {
+          self.vue.cowell = false;
+          self.vue.crown = false;
+          self.vue.ten = false;
+          self.vue.porter = false;
+          self.vue.rcc = true;
+        }
+        if (self.vue.time === 'breakfast'){
+          self.vue.breakfast = true;
+          self.vue.lunch = false;
+          self.vue.dinner = false;
+        }
+        else if (self.vue.time === 'lunch'){
+          self.vue.breakfast = false;
+          self.vue.lunch = true;
+          self.vue.dinner = false;
+        }
+        else {
+          self.vue.breakfast = false;
+          self.vue.lunch = false;
+          self.vue.dinner = true;
+        }
     };
 
     // Complete as needed.
@@ -49,11 +87,18 @@ var app = function() {
           location: null,
           time: null,
           menu: [],
-          show: false
+          cowell: false,
+          crown: false,
+          ten: false,
+          porter: false,
+          rcc: false,
+          breakfast: false,
+          lunch: false,
+          dinner: false
         },
         methods: {
           log_location: self.log_location,
-          log_time: self.log_time,
+          log_time: self.log_time
         }
 
     });

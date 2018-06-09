@@ -31,11 +31,7 @@
                 Rachel Carson & Oakes
             </h6>
         </div>
-        <div v-if="show === true">
-          <tr class = "center" v-for="item in menu">
-              <td>${item}</td>
-          </tr>
-        </div>
+
     </div>
 <!--
     <div class="container">
@@ -87,6 +83,98 @@
                    src="https://www.budgetbytes.com/wp-content/uploads/2018/01/Sheet-Pan-BBQ-Meatloaf-Dinner-plate.jpg" style="width:17%;height:27%;">
         </div>
     </div>
+
+
+        {{for item in cowellBreakfast:}}
+          <h6 v-if="cowell && breakfast">
+            {{=item}}
+          </h6>
+        {{pass}}
+
+        {{for item in cowellLunch:}}
+          <h6 v-if="cowell && lunch">
+            {{=item}}
+          </h6>
+        {{pass}}
+
+        {{for item in cowellDinner:}}
+          <h6 v-if="cowell && dinner">
+            {{=item}}
+          </h6>
+        {{pass}}
+
+        {{for item in crownBreakfast:}}
+          <h6 v-if="crown && breakfast">
+            {{=item}}
+          </h6>
+        {{pass}}
+
+        {{for item in crownLunch:}}
+          <h6 v-if="crown && lunch">
+            {{=item}}
+          </h6>
+        {{pass}}
+
+        {{for item in crownDinner:}}
+          <h6 v-if="crown && dinner">
+            {{=item}}
+          </h6>
+        {{pass}}
+
+        {{for item in tenBreakfast:}}
+          <h6 v-if="ten && breakfast">
+            {{=item}}
+          </h6>
+        {{pass}}
+
+        {{for item in tenLunch:}}
+          <h6 v-if="ten && lunch">
+            {{=item}}
+          </h6>
+        {{pass}}
+
+        {{for item in tenDinner:}}
+          <h6 v-if="ten && dinner">
+            {{=item}}
+          </h6>
+        {{pass}}
+
+        {{for item in porterBreakfast:}}
+          <h6 v-if="porter && breakfast">
+            {{=item}}
+          </h6>
+        {{pass}}
+
+        {{for item in porterLunch:}}
+          <h6 v-if="porter && lunch">
+            {{=item}}
+          </h6>
+        {{pass}}
+
+        {{for item in porterDinner:}}
+          <h6 v-if="porter && dinner">
+            {{=item}}
+          </h6>
+        {{pass}}
+
+        {{for item in rccBreakfast:}}
+          <h6 v-if="rcc && breakfast">
+            {{=item}}
+          </h6>
+        {{pass}}
+
+        {{for item in rccLunch:}}
+          <h6 v-if="rcc && lunch">
+            {{=item}}
+          </h6>
+        {{pass}}
+
+        {{for item in rccDinner:}}
+          <h6 v-if="rcc && dinner">
+            {{=item}}
+          </h6>
+        {{pass}}
+
 
     {{pass}}
   </div>

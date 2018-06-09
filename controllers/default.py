@@ -127,7 +127,22 @@ def call():
     return service()
 
 def order():
-    return dict()
+    return dict(cowellBreakfast = getCowellBreakFast(),
+                cowellLunch = getCowellLunch(),
+                cowellDinner = getCowellDinner(),
+                crownBreakfast = getMerillBreakfast(),
+                crownLunch = getMerillLunch(),
+                crownDinner = getMerillDinner(),
+                tenBreakfast = getTenBreakfast(),
+                tenLunch = getTenLunch(),
+                tenDinner = getTenDinner(),
+                porterBreakfast = getPorterBreakfast(),
+                porterLunch = getPorterLunch(),
+                porterDinner = getPorterDinner(),
+                rccBreakfast = getRccBreakfast(),
+                rccLunch = getRccLunch(),
+                rccDinner = getRccDinner()
+            )
 
 def about():
 
@@ -143,8 +158,6 @@ def faq():
 def deliver():
     return dict()
 
-def cowell_breakfast():
-    return dict(checklists=getCowellBreakFast())
 
 
 import os
