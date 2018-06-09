@@ -127,7 +127,7 @@ def call():
     return service()
 
 def order():
-    return dict(checklists=getCowellBreakFast())
+    return dict()
 
 def about():
 
@@ -142,6 +142,9 @@ def faq():
 
 def deliver():
     return dict()
+
+def cowell_breakfast():
+    return dict(checklists=getCowellBreakFast())
 
 
 import os

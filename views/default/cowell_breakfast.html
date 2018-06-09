@@ -1,0 +1,15 @@
+{{extend 'layout.html'}}
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Shadows+Into+Light|Tangerine|Abel|Oswald" rel="stylesheet">
+        <link href="Dheliver/static/css" rel="stylesheet" type="text/css"/>
+{{block head}}
+{{end}}
+
+<div class="main_content">
+
+    <center>
+        <h2 style="font-family: 'Shadows Into Light', serif;">Cowell Breakfast</h2>
+    </center>
+
+{{for cl in checklists:}}
+        <h6>{{=cl}}</h6>
+        {{pass}}
