@@ -1,1 +1,1 @@
-['los cabos chipotle beef', 'oven roasted chicken thigh', 'condiments', 'mexican rice', 'steamed rice', 'sweet potato fries', 'bar indian', 'basmati rice pullao', 'channa masala', 'condiments', 'madras chicken']
+['oven roasted chicken thigh', 'portobello philly sandwich', 'steak cut fries', 'steamed rice', 'chipotle vegan fajitas', 'condiments', 'fried chicken']

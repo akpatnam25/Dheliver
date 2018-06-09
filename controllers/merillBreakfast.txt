@@ -1,1 +1,1 @@
-['breakfast enchiladas', 'cage free scrambled eggs', 'hard-boiled cage free eggs', 'mexican chorizo sausage patties', 'natural bridgestofu scramble', 'mexican potato hash', 'almond allspice coffecake', 'carrot raisin muffin', 'morning glory blueberry granola nut muffin', 'vegan granola nut', 'cage free omelette bar']
+[]

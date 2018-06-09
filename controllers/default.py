@@ -155,7 +155,7 @@ def checkout():
 def faq():
     return dict()
 
-def deliver():
+def deliveries():
     return dict()
 
 

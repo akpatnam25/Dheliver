@@ -1,1 +1,1 @@
-['breakfast', 'belgian waffles', 'cage free scrambled eggs', 'eggbeaters scramble', 'ham steaks', 'hard-boiled cage free eggs', 'natural bridgestofu scramble', 'oatmeal gluten-free', "potatoes o'brien", 'soyrizo and potato', 'almond allspice coffecake', 'carrot raisin muffin', 'morning glory blueberry granola nut muffin', 'vegan granola nut', 'cage free omelette bar']
+['breakfast', 'apple pancakes', 'cage free scrambled eggs', 'hash brown patty', 'oatmeal gluten-free', 'soyrizo tofu scramble', 'steamed rice']
