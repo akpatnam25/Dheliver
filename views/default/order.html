@@ -191,9 +191,20 @@
         {{pass}}
 
       <div class="login_button">
-          <a href="{{=URL('default', 'checkout')}}" class="btn rounded">Order</a>
+          <a href="{{=URL('default', 'checkout')}}" class="btn rounded">Order by Card</a>
       </div>
     </center>
+
+    <div class="login_button">
+      <a href="{{=URL('default', 'index')}}" class="btn rounded">Order by Cash</a>
+  </div>
+</center>
+
+<div class="popup" onclick="myFunction()">
+  <span class="popuptext" id="myPopup"></span>
+</div>
+
+
 
 
     {{pass}}
