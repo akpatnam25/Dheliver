@@ -7,7 +7,7 @@
 # - user is required for authentication and authorization
 # - download is for downloading files uploaded in the db (does streaming)
 # -------------------------------------------------------------------------
-
+import os
 
 def index():
     """
@@ -157,9 +157,10 @@ def about():
 
     return dict()
 
-@auth.requires_login()
 def checkout():
-    db.checklist.insert(user_email='asdf',title='test',memo='asdfasdf')
+    loc = request.vars.location
+    print loc
+    db.checklist.insert(user_email=loc,title='test',memo='asdfasdf')
     return dict()
 
 def faq():
@@ -170,8 +171,6 @@ def deliveries():
     return dict(publists=publists)
 
 
-
-import os
 def get_menu():
     if request.vars.location == "cowell":
         if request.vars.time == "breakfast":
