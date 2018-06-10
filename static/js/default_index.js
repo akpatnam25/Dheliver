@@ -13,6 +13,8 @@ var app = function() {
         }
     };
 
+
+
     // Enumerates an array.
     var enumerate = function(v) {
         var k=0;
@@ -25,6 +27,17 @@ var app = function() {
     };
 
     self.log_time = function (event){
+
+        $.post(checkout_url,
+           {
+               location: self.vue.location,
+               time: self.vue.time
+           },
+        function (data) {
+            self.vue.menu = data;
+            self.vue.show = true;
+        })
+
         self.vue.time = event.target.name;
         if (self.vue.location === 'cowell'){
           self.vue.cowell = true;

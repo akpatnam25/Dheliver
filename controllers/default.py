@@ -159,9 +159,10 @@ def about():
 
 def checkout():
     loc = request.vars.location
-    print loc
-    db.checklist.insert(user_email=loc,title='test',memo='asdfasdf')
+    time = request.vars.time
+    db.checklist.insert(user_email=loc,title=time,memo=loc)
     return dict()
+
 
 def faq():
     return dict()
@@ -169,45 +170,6 @@ def faq():
 def deliveries():
     publists = db().select(db.checklist.ALL)
     return dict(publists=publists)
-
-
-def get_menu():
-    if request.vars.location == "cowell":
-        if request.vars.time == "breakfast":
-            return getCowellBreakFast()
-        elif request.vars.time == "lunch":
-            return getCowellLunch()
-        else:
-            return getCowellDinner()
-    elif request.vars.location == "crown":
-        if request.vars.time == "breakfast":
-            return getMerillBreakfast()
-        elif request.vars.time == "lunch":
-            return getMerillLunch()
-        else:
-            return getMerillDinner()
-    elif request.vars.location == "ten":
-        if request.vars.time == "breakfast":
-            return getTenBreakfast()
-        elif request.vars.time == "lunch":
-            return getTenLunch()
-        else:
-            return getTenDinner()
-    elif request.vars.location == "porter":
-        if request.vars.time == "breakfast":
-            return getPorterBreakfast()
-        elif request.vars.time == "lunch":
-            return getPorterLunch()
-        else:
-            return getPorterDinner()
-    else:
-        if request.vars.time == "breakfast":
-            return getRccBreakfast()
-        elif request.vars.time == "lunch":
-            return getRccLunch()
-        else:
-            return getRccDinner()
-
 
 def getCowellBreakFast():
     infile = open(os.path.join(request.folder, 'controllers', 'cowellBreakfast.txt'))
@@ -503,10 +465,3 @@ def getTenLateNight():
     words[0] = words[0].replace(" ", "")
     return words
 
-def getLogLocation():
-
-    return request.var.location
-
-def getLogTime():
-
-    return request.vars.time
