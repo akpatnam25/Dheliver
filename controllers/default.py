@@ -116,6 +116,15 @@ def download():
     """
     return response.download(request, db)
 
+@auth.requires_login()
+def togglePublic():
+    q = ((db.checklist.user_email == auth.user.email) &
+         (db.checklist.id == request.args(0)))
+    cl = db(q).select().first()
+
+    
+    redirect(URL('default', 'deliveries'))
+
 
 def call():
     """
@@ -148,8 +157,9 @@ def about():
 
     return dict()
 
+@auth.requires_login()
 def checkout():
-
+    db.checklist.insert(user_email='asdf',title='test',memo='asdfasdf')
     return dict()
 
 def faq():
