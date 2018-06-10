@@ -12,8 +12,8 @@
     {{for pl in publists:}}
      <div class="memo">
         <div class="memo_text">
-          <div class="memo_title">{{=pl.user_email}}</div>
-          <div class="memo_content">{{=pl.title}}</div>
+          <div class="memo_title">{{=pl.user_email}} from {{=pl.title}}</div>
+          <div class="memo_content">{{=pl.updated_on}}</div>
         </div>
         <div>
           <div class="button_list">
