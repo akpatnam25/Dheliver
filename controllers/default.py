@@ -22,7 +22,7 @@ def index():
 
 
 def no_swearing(form):
-    if 'fool' in form.vars.memo:
+    if 'fool' in form.vars.Delivery_Time:
         form.errors.memo = T('No swearing please')
 
 @auth.requires_login()
