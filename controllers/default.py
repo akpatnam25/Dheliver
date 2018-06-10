@@ -42,10 +42,10 @@ def test():
 @auth.requires_login()
 @auth.requires_signature()
 def delete():
-    if request.args(0) is not None:
-        q = ((db.checklist.user_email == auth.user.email) &
-             (db.checklist.id == request.args(0)))
-        db(q).delete()
+
+    q = ((db.checklist.user_email == auth.user.email) &
+         (db.checklist.id == request.args(0)))
+    db(q).delete()
     redirect(URL('default', 'index'))
 
 @auth.requires_login()

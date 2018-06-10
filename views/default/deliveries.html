@@ -12,23 +12,12 @@
     {{for pl in publists:}}
      <div class="memo">
         <div class="memo_text">
-          <div class="memo_title">{{=pl.user_email}} from {{=pl.title}}</div>
+          <div class="memo_title">{{=pl.user_email}} </div>
           <div class="memo_content">{{=pl.updated_on}} Phone Number: {{=pl.phone_number}}</div>
         </div>
         <div>
           <div class="button_list">
-            <div class="buttons">
-                   {{if pl.is_public == True:}}
-                    <a class="btn rounded" href="{{=URL('default', 'togglePublic', args=[pl.id])}}">
-                          <i class="fa fa-check"></i>
-                    </a>
-                 {{pass}}
-                {{if pl.is_public == False:}}
-                   <a class="btn rounded" href="{{=URL('default', 'togglePublic', args=[pl.id])}}">
-                          <i class="fa fa-plus"></i>
-                    </a>
-                 {{pass}}
-            </div>
+
           </div>
         </div>
       </div>
@@ -38,7 +27,7 @@
      <div class="memo">
         <div class="memo_text">
           <div class="memo_title">{{=ol.user_email}} from {{=ol.dh}}</div>
-          <div class="memo_content">{{=ol.updated_on}} loc: {{=ol.times}}</div>
+          <div class="memo_content">{{=ol.updated_on}} </div>
         </div>
         <div>
           <div class="button_list">
