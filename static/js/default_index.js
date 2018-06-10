@@ -26,6 +26,10 @@ var app = function() {
         console.log(self.vue.location);
     };
 
+    self.button_swap = function (event) {
+       $("div#button_list").hide();
+    };
+
     self.log_time = function (event){
 
         $.post(checkout_url,
@@ -122,9 +126,10 @@ var app = function() {
         methods: {
           log_location: self.log_location,
           log_time: self.log_time,
+          button_swap: self.button_swap,
           add_to_cart: self.add_to_cart,
           cash_order: function (event) {
-              alert('Your order has been processed as a cash payment! Please pay $5 when the delivery arrives. Thankyou for using Dheliver!')
+              alert('Your order has been processed as a cash payment! Please pay $5 when the delivery arrives. Thank you for using Dheliver!')
           }
         }
 
