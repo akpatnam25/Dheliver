@@ -33,4 +33,29 @@
         </div>
       </div>
 {{pass}}
+
+    {{for ol in orderlists:}}
+     <div class="memo">
+        <div class="memo_text">
+          <div class="memo_title">{{=ol.user_email}} from {{=ol.dh}}</div>
+          <div class="memo_content">{{=ol.updated_on}} loc: {{=ol.times}}</div>
+        </div>
+        <div>
+          <div class="button_list">
+            <div class="buttons">
+                   {{if ol.is_public == True:}}
+                    <a class="btn rounded" href="{{=URL('default', 'togglePublic', args=[ol.id])}}">
+                          <i class="fa fa-check"></i>
+                    </a>
+                 {{pass}}
+                {{if ol.is_public == False:}}
+                   <a class="btn rounded" href="{{=URL('default', 'togglePublic', args=[ol.id])}}">
+                          <i class="fa fa-plus"></i>
+                    </a>
+                 {{pass}}
+            </div>
+          </div>
+        </div>
+      </div>
+{{pass}}
 </div>
