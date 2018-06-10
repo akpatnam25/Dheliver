@@ -13,7 +13,7 @@
      <div class="memo">
         <div class="memo_text">
           <div class="memo_title">{{=pl.user_email}} </div>
-          <div class="memo_content">{{=pl.updated_on}} Phone Number: {{=pl.phone_number}}</div>
+          <div class="memo_content">{{=pl.updated_on}} Phone Number: {{=pl.phone_number}} Delivery Instructions: {{=pl.Additional_Instructions}} Delivery Time: {{=pl.Delivery_Time}}</div>
         </div>
         <div>
           <div class="button_list">
@@ -24,6 +24,8 @@
 {{pass}}
 
     {{for ol in orderlists:}}
+
+    {{if ol.dh != None:}}
      <div class="memo">
         <div class="memo_text">
           <div class="memo_title">{{=ol.user_email}} from {{=ol.dh}}</div>
@@ -47,4 +49,5 @@
         </div>
       </div>
 {{pass}}
+    {{pass}}
 </div>
