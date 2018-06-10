@@ -29,7 +29,6 @@
   
   .example.example1 .row + .row {
     border-top: 20px solid #819efc;
-    background: ;
   }
   
   .example.example1 label {
