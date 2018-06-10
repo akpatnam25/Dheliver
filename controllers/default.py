@@ -160,7 +160,7 @@ def about():
 def checkout():
     loc = request.vars.location
     time = request.vars.time
-    db.checklist.insert(user_email=auth.user.email,title=time,memo="aasdasdf")
+    db.checklist.insert(user_email=auth.user.email, title=loc, memo="aasdasdf")
     return dict()
 
 
