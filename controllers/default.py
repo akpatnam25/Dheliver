@@ -22,7 +22,7 @@ def index():
 
 
 def no_swearing(form):
-    if 'fool' in form.vars.memo:
+    if 'fool' in form.vars.Delivery_Time:
         form.errors.memo = T('No swearing please')
 
 @auth.requires_login()
@@ -163,7 +163,7 @@ def checkout():
     item_selected = request.vars.menu
     loc = request.vars.location
     time = request.vars.time
-    db.checklist.insert(user_email=auth.user.email, title=loc, memo=time)
+    db.orderlist.insert(user_email=auth.user.email, dh=loc, times=time)
     return dict()
 
 
@@ -172,7 +172,8 @@ def faq():
 
 def deliveries():
     publists = db().select(db.checklist.ALL)
-    return dict(publists=publists)
+    orderlists = db().select(db.orderlist.ALL)
+    return dict(publists=publists, orderlists=orderlists)
 
 def getCowellBreakFast():
     infile = open(os.path.join(request.folder, 'controllers', 'cowellBreakfast.txt'))
