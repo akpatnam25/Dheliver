@@ -31,7 +31,8 @@ var app = function() {
         $.post(checkout_url,
            {
                location: self.vue.location,
-               time: self.vue.time
+               time: self.vue.time,
+               menu_item: self.vue.menu_item
            },
         function (data) {
             self.vue.menu = data;
@@ -91,10 +92,13 @@ var app = function() {
         }
     };
 
-    self.add_to_cart = function(event){
-        alert(carted)
+     self.add_to_cart =function(event){
+        //self.vue.menu.push()
+        alert(item + ' has been added to the cart')
 
-    }
+
+
+    };
 
     // Complete as needed.
     self.vue = new Vue({
@@ -104,6 +108,7 @@ var app = function() {
         data: {
           location: null,
           time: null,
+          menu_item: null,
           menu: [],
           cowell: false,
           crown: false,

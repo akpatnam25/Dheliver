@@ -87,9 +87,11 @@
 
         {{for item in cowellBreakfast:}}
           <h6 v-if="cowell && breakfast">
-            <input id="checkBox" type="checkbox"
-            >
+
+              <input id="checkBox" type="checkbox" id="myCheck" onclick="myFunction()">
+              <p id="text" style="display:none">Checkbox is CHECKED!</p>
             {{=item}}
+              <input itemmenu="item">
           </h6>
         {{pass}}
 
