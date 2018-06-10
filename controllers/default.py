@@ -503,3 +503,11 @@ def getTenLateNight():
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
     return words
+
+def getLogLocation():
+
+    return request.var.location
+
+def getLogTime():
+
+    return request.vars.time

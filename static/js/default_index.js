@@ -78,6 +78,11 @@ var app = function() {
         }
     };
 
+    self.add_to_cart = function(event){
+        alert(carted)
+
+    }
+
     // Complete as needed.
     self.vue = new Vue({
         el: "#vue-div",
@@ -99,6 +104,7 @@ var app = function() {
         methods: {
           log_location: self.log_location,
           log_time: self.log_time,
+          add_to_cart: self.add_to_cart,
           cash_order: function (event) {
               alert('Your order has been processed as a cash payment! Please pay $5 when the delivery arrives. Thankyou for using Dheliver!')
           }
