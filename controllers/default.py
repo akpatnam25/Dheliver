@@ -156,7 +156,7 @@ def faq():
     return dict()
 
 def deliveries():
-    publists = {"69","asdf","tasdf"}
+    publists = db.select(db.checklist.ALL)
     return dict(publists=publists)
 
 
