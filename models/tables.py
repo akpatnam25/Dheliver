@@ -17,7 +17,7 @@ db.define_table('checklist',
                 Field('user_email', default=get_user_email()),
                 Field('title'),
                 Field('memo', 'text'),
-                Field('updated_on', 'datetime', update=datetime.datetime.utcnow()),
+                Field('updated_on', 'datetime', update=datetime.datetime.now()),
                 Field('is_public', 'boolean',default=False),
                 Field('phone_number')
                 )
