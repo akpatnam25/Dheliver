@@ -187,6 +187,8 @@ def getCowellBreakFast():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
+    if 'breakfast' in words:
+        words.remove('breakfast')
     return words
 
 
@@ -247,6 +249,8 @@ def getMerillBreakfast():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
+    if 'breakfast' in words:
+        words.remove('breakfast')
     return words
 
 
@@ -304,6 +308,8 @@ def getPorterBreakfast():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
+    if 'breakfast' in words:
+        words.remove('breakfast')
     return words
 
 def getPorterLunch():
@@ -362,6 +368,8 @@ def getRccBreakfast():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
+    if 'breakfast' in words:
+        words.remove('breakfast')
     return words
 
 
@@ -422,6 +430,8 @@ def getTenBreakfast():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
+    if 'breakfast' in words:
+        words.remove('breakfast')
     return words
 
 

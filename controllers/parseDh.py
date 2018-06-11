@@ -4,13 +4,14 @@ def getCowellBreakFast():
     strMessage = str(message)
     finalStr = ""
     for i in range(len(strMessage)-3):
-        if strMessage[i].isalpha() :
+        if strMessage[i].isalpha():
             finalStr += strMessage[i]
         else:
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
-    print "AK IS DUMB"
+    words.remove('breakfast')
+    
     return dict(menu=words)
 
 
