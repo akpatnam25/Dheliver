@@ -31,7 +31,7 @@ def add():
     form = SQLFORM(db.checklist)
     if form.process(onvalidation=no_swearing).accepted:
         session.flash = T("Checklist added.")
-        redirect(URL('default','checkout'))
+        redirect(URL('default','index'))
     elif form.errors:
         session.flash = T('Please correct the info')
     return dict(form=form)
