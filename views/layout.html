@@ -24,7 +24,9 @@
           <label class="ham padded fa fa-bars" for="menu"></label>
           <div class="burger accordion">
             <input type="checkbox" id="menu"/>
-            <a href="{{=URL('default', 'index')}}">Home</a>
+            <a href="{{=URL('default', 'index')}}"><i class="fa fa-home"></i></a>
+              <a href="{{=URL('default', 'user/profile')}}"><i class="fa fa-universal-access"></i></a>
+              <a href="{{=URL('default', 'user/logout')}}"><i class="fa fa-sign-out"></i></a>
 
             <ul class="menu right">
               <li>
