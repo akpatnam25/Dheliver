@@ -24,7 +24,8 @@
           <label class="ham padded fa fa-bars" for="menu"></label>
           <div class="burger accordion">
             <input type="checkbox" id="menu"/>
-            {{=MENU(response.menu,_class='menu')}}
+            <a href="{{=URL('default', 'index')}}">Home</a>
+
             <ul class="menu right">
               <li>
                 {{=auth.navbar(mode='dropdown')}}
