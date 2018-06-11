@@ -36,7 +36,7 @@ var app = function() {
            {
                location: self.vue.location,
                time: self.vue.time,
-               menu_item: self.vue.menu_item
+               //menu_item: self.vue.menu_item
            },
         function (data) {
             self.vue.menu = data;
@@ -103,8 +103,14 @@ var app = function() {
        console.log(in_cart);
         //self.vue.menu.push()
         //alert(item + ' has been added to the cart')
-
-
+         $.post(checkout_url,
+           {
+               item: item
+           },
+        function (data) {
+            self.vue.value = data;
+            self.vue.show = true;
+        })
 
     };
 
