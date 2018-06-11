@@ -96,43 +96,33 @@ var app = function() {
         }
     };
 
-     self.add_to_cart =function(event){
-        //self.vue.menu.push()
-        alert(item + ' has been added to the cart')
-
-
-
-    };
-
     // Complete as needed.
     self.vue = new Vue({
         el: "#vue-div",
         delimiters: ['${', '}'],
         unsafeDelimiters: ['!{', '}'],
         data: {
-          location: null,
-          time: null,
-          menu_item: null,
-          menu: [],
-          cowell: false,
-          crown: false,
-          ten: false,
-          porter: false,
-          rcc: false,
-          breakfast: false,
-          lunch: false,
-          dinner: false
+            location: null,
+            time: null,
+            menu_item: null,
+            menu: [],
+            cowell: false,
+            crown: false,
+            ten: false,
+            porter: false,
+            rcc: false,
+            breakfast: false,
+            lunch: false,
+            dinner: false
         },
         methods: {
-          log_location: self.log_location,
-          log_time: self.log_time,
-          button_swap: self.button_swap,
-          add_to_cart: self.add_to_cart,
-          cash_order: function (event) {
-              alert('Your order has been processed as a cash payment! Please pay $5 when the delivery arrives. Thank you for using Dheliver!')
-          }
+            log_location: self.log_location,
+            log_time: self.log_time,
+            button_swap: self.button_swap,
+            pop_up: function(event){
+                alert("sdfdsfds");
+            }
         }
-
     });
 
     $("#vue-div").show();
