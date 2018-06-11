@@ -28,6 +28,7 @@ db.define_table('orderlist',
                 Field('user_email', default=get_user_email()),
                 Field('dh', 'text'),
                 Field('times', 'text'),
+                Field('menu_item', 'text'),
                 Field('updated_on', 'datetime', update=datetime.datetime.now()),
                 Field('is_public', 'boolean',default=False),
                 )

@@ -137,6 +137,7 @@ def call():
 
 def order():
 
+
     return dict(cowellBreakfast = getCowellBreakFast(),
                 cowellLunch = getCowellLunch(),
                 cowellDinner = getCowellDinner(),
@@ -160,10 +161,10 @@ def about():
 
 def checkout():
 
-    item_selected = request.vars.menu
+    item_selected = request.vars.item
     loc = request.vars.location
     time = request.vars.time
-    db.orderlist.insert(user_email=auth.user.email, dh=loc, times=time)
+    db.orderlist.insert(user_email=auth.user.email, dh=loc, times=time, menu_item=item_selected)
     return dict()
 
 
