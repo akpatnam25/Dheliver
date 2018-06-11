@@ -1,9 +1,24 @@
 {{extend 'layout.html'}}
-
+<script src="{{=URL('static', 'js/vue.js')}}"></script>
+<script src="{{=URL('static', 'js/default_index.js')}}"></script>
 <div class="mycontent">
 
     <h1>Deliver Setup</h1>
 
     {{=form}}
+
+    <div class="login_button">
+        <a href="{{=URL('default', 'checkout')}}" class="btn rounded">Submit and Order by Card</a>
+    </div>
+  </center>
+
+  <div class="login_button">
+    <a href="{{=URL('default', 'index')}}" class="btn rounded" v-on:click="cash_order">Submit and Order by Cash</a>
+    
+</div>
+
   </div>
+  <div class="popup" onclick="myFunction()">
+      <span class="popuptext" id="myPopup"></span>
+      
 </div>
