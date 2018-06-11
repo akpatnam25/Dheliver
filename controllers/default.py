@@ -204,6 +204,8 @@ def getCowellLunch():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
+    if 'lunch' in words:
+        words.remove('breakfast')
     return words
 
 
@@ -219,6 +221,8 @@ def getCowellDinner():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
+    if 'dinner' in words:
+        words.remove('breakfast')
     return words
 
 
@@ -266,6 +270,8 @@ def getMerillLunch():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
+    if 'lunch' in words:
+        words.remove('breakfast')
     return words
 
 def getMerillDinner():
@@ -280,6 +286,8 @@ def getMerillDinner():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
+    if 'dinner' in words:
+        words.remove('breakfast')
     return words
 
 def getMerillLateNight():
@@ -324,6 +332,8 @@ def getPorterLunch():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
+    if 'lunch' in words:
+        words.remove('breakfast')
     return words
 
 def getPorterDinner():
@@ -338,6 +348,8 @@ def getPorterDinner():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
+    if 'dinner' in words:
+        words.remove('breakfast')
     return words
 
 
@@ -385,6 +397,8 @@ def getRccLunch():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
+    if 'lunch' in words:
+        words.remove('breakfast')
     return words
 
 
@@ -400,6 +414,8 @@ def getRccDinner():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
+    if 'dinner' in words:
+        words.remove('breakfast')
     return words
 
 
@@ -447,6 +463,8 @@ def getTenLunch():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
+    if 'lunch' in words:
+        words.remove('breakfast')
     return words
 
 
@@ -462,6 +480,8 @@ def getTenDinner():
             finalStr += " "
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
+    if 'dinner' in words:
+        words.remove('breakfast')
     return words
 
 
