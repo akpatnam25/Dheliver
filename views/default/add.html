@@ -1,6 +1,13 @@
 {{extend 'layout.html'}}
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Shadows+Into+Light|Tangerine|Abel|Oswald" rel="stylesheet">
+        <link rel="stylesheet" href="/Dheliver/static/css/order_menu.css" />
+{{block head}}
 <script src="{{=URL('static', 'js/vue.js')}}"></script>
 <script src="{{=URL('static', 'js/default_index.js')}}"></script>
+<script>
+
+</script>
+
 <div class="mycontent">
 
     <h1>Deliver Setup</h1>
@@ -10,15 +17,14 @@
     <div class="login_button">
         <a href="{{=URL('default', 'checkout')}}" class="btn rounded">Submit and Order by Card</a>
     </div>
-  </center>
 
-  <div class="login_button">
-    <a href="{{=URL('default', 'index')}}" class="btn rounded" v-on:click="cash_order">Submit and Order by Cash</a>
-    
-</div>
+    <a href="{{=URL('default', 'index')}}" class="btn rounded" onclick="cash_popup()">Submit and Order by Cash</a>
 
-  </div>
-  <div class="popup" onclick="myFunction()">
-      <span class="popuptext" id="myPopup"></span>
-      
+    <script>
+        function cash_popup() {
+            alert("Thanks for using Dheliver! Your order will arrive soon! Please pay $5 for the delivery when it arrives!");
+        }
+    </script>
+
+
 </div>
