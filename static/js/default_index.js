@@ -97,8 +97,12 @@ var app = function() {
     };
 
      self.add_to_cart =function(event){
+       console.log(event.target.value);
+       var item = event.target.value;
+       var in_cart = event.target.checked;
+       console.log(in_cart);
         //self.vue.menu.push()
-        alert(item + ' has been added to the cart')
+        //alert(item + ' has been added to the cart')
 
 
 
