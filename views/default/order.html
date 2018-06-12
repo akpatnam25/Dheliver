@@ -7,6 +7,9 @@
 <script>
     var checkout_url = "{{=URL('default', 'checkout')}}";
 </script>
+        <head>
+            <link rel="stylesheet" href="/Dheliver/static/css/order_menu.css" />
+        </head>
 {{end}}
 
 <div class="main_content">
@@ -87,151 +90,241 @@
 
         {{for item in cowellBreakfast:}}
           <h6 v-if="cowell && breakfast">
-              <center>
-                  <input id="checkBox" value="{{=item}}" type="checkbox" v-on:click="add_to_cart">
-                    {{=item}}
-                  </input>
-              </center>
+              <table>
+                  <tr>
+                      <th>
+                          <center>
+                              <input id="checkBox" value="{{=item}}" type="checkbox" v-on:click="add_to_cart">
+                                {{=item}}
+                              </input>
+                          </center>
+                       </th>
+                  </tr>
+              </table>
           </h6>
         {{pass}}
 
         {{for item in cowellLunch:}}
           <h6 v-if="cowell && lunch">
-              <center>
-                  <input id="checkBox" value="{{=item}}" type="checkbox" v-on:click="add_to_cart">
-                    {{=item}}
-                  </input>
-          </center>
+              <table>
+                  <tr>
+                      <th>
+                          <center>
+                              <input id="checkBox" value="{{=item}}" type="checkbox" v-on:click="add_to_cart">
+                                {{=item}}
+                              </input>
+                          </center>
+                      </th>
+                  </tr>
+              </table>
           </h6>
         {{pass}}
 
         {{for item in cowellDinner:}}
           <h6 v-if="cowell && dinner">
-              <center>
-                  <input id="checkBox" value="{{=item}}" type="checkbox" v-on:click="add_to_cart">
-                    {{=item}}
-                  </input>
-              </center>
+              <table>
+                  <tr>
+                      <th>
+                          <center>
+                              <input id="checkBox" value="{{=item}}" type="checkbox" v-on:click="add_to_cart">
+                                {{=item}}
+                              </input>
+                          </center>
+                      </th>
+                  </tr>
+              </table>
           </h6>
         {{pass}}
 
         {{for item in crownBreakfast:}}
           <h6 v-if="crown && breakfast">
-              <center>
-                  <input id="checkBox" value="{{=item}}" type="checkbox" v-on:click="add_to_cart">
-                    {{=item}}
-                  </input>
-              </center>
+              <table>
+                  <tr>
+                      <th>
+                          <center>
+                              <input id="checkBox" value="{{=item}}" type="checkbox" v-on:click="add_to_cart">
+                                {{=item}}
+                              </input>
+                          </center>
+                      </th>
+                  </tr>
+              </table>
           </h6>
         {{pass}}
 
         {{for item in crownLunch:}}
           <h6 v-if="crown && lunch">
-              <center>
-                  <input id="checkBox" value="{{=item}}" type="checkbox" v-on:click="add_to_cart">
-              {{=item}}
-                  </input>
-              </center>
+              <table>
+                  <tr>
+                      <th>
+                          <center>
+                              <input id="checkBox" value="{{=item}}" type="checkbox" v-on:click="add_to_cart">
+                          {{=item}}
+                              </input>
+                          </center>
+                      </th>
+                  </tr>
+              </table>
           </h6>
         {{pass}}
 
         {{for item in crownDinner:}}
           <h6 v-if="crown && dinner">
-              <center>
-                  <input id="checkBox" value="{{=item}}" type="checkbox" v-on:click="add_to_cart">
-                    {{=item}}
-                  </input>
-              </center>
+              <table>
+                  <tr>
+                      <th>
+                          <center>
+                              <input id="checkBox" value="{{=item}}" type="checkbox" v-on:click="add_to_cart">
+                                {{=item}}
+                              </input>
+                          </center>
+                      </th>
+                  </tr>
+              </table>
           </h6>
         {{pass}}
 
         {{for item in tenBreakfast:}}
           <h6 v-if="ten && breakfast">
-              <center>
-                  <input id="checkBox" value="{{=item}}" type="checkbox" v-on:click="add_to_cart">
-                    {{=item}}
-                  </input>
-              </center>
+            <table>
+                <tr>
+                      <th>
+                          <center>
+                              <input id="checkBox" value="{{=item}}" type="checkbox" v-on:click="add_to_cart">
+                                {{=item}}
+                              </input>
+                          </center>
+                      </th>
+                  </tr>
+             </table>
           </h6>
         {{pass}}
 
         {{for item in tenLunch:}}
           <h6 v-if="ten && lunch">
-              <center>
-                  <input id="checkBox" value="{{=item}}" type="checkbox" v-on:click="add_to_cart">
-                    {{=item}}
-                  </input>
-              </center>
+              <table>
+                  <tr>
+                      <th>
+                          <center>
+                              <input id="checkBox" value="{{=item}}" type="checkbox" v-on:click="add_to_cart">
+                                {{=item}}
+                              </input>
+                          </center>
+                      </th>
+                  </tr>
+              </table>
           </h6>
         {{pass}}
 
         {{for item in tenDinner:}}
           <h6 v-if="ten && dinner">
-              <center>
-                  <input id="checkBox" value="{{=item}}" type="checkbox" v-on:click="add_to_cart">
-                    {{=item}}
-                  </input>
-              </center>
+              <table>
+                  <tr>
+                      <th>
+                          <center>
+                              <input id="checkBox" value="{{=item}}" type="checkbox" v-on:click="add_to_cart">
+                                {{=item}}
+                              </input>
+                          </center>
+                      </th>
+                  </tr>
+              </table>
           </h6>
         {{pass}}
 
         {{for item in porterBreakfast:}}
           <h6 v-if="porter && breakfast">
-              <center>
-                  <input id="checkBox" value="{{=item}}" type="checkbox" v-on:click="add_to_cart">
-                    {{=item}}
-                  </input>
-              </center>
+              <table>
+                  <tr>
+                      <th>
+                          <center>
+                              <input id="checkBox" value="{{=item}}" type="checkbox" v-on:click="add_to_cart">
+                                {{=item}}
+                              </input>
+                          </center>
+                      </th>
+                  </tr>
+              </table>
           </h6>
         {{pass}}
 
         {{for item in porterLunch:}}
           <h6 v-if="porter && lunch">
-              <center>
-                  <input id="checkBox" value="{{=item}}" type="checkbox" v-on:click="add_to_cart">
-                    {{=item}}
-                  </input>
-              </center>
+              <table>
+                  <tr>
+                      <th>
+                          <center>
+                              <input id="checkBox" value="{{=item}}" type="checkbox" v-on:click="add_to_cart">
+                                {{=item}}
+                              </input>
+                          </center>
+                      </th>
+                  </tr>
+              </table>
           </h6>
         {{pass}}
 
         {{for item in porterDinner:}}
           <h6 v-if="porter && dinner">
-              <center>
-                  <input id="checkBox" value="{{=item}}" type="checkbox" v-on:click="add_to_cart">
-                    {{=item}}
-                  </input>
-              </center>
+              <table>
+                  <tr>
+                      <th>
+                          <center>
+                              <input id="checkBox" value="{{=item}}" type="checkbox" v-on:click="add_to_cart">
+                                {{=item}}
+                              </input>
+                          </center>
+                      </th>
+                  </tr>
+              </table>
           </h6>
         {{pass}}
 
         {{for item in rccBreakfast:}}
           <h6 v-if="rcc && breakfast">
-              <center>
-                  <input id="checkBox" value="{{=item}}" type="checkbox" v-on:click="add_to_cart">
-              {{=item}}
-                  </input>
-              </center>
+              <table>
+                  <tr>
+                      <th>
+                          <center>
+                              <input id="checkBox" value="{{=item}}" type="checkbox" v-on:click="add_to_cart">
+                          {{=item}}
+                              </input>
+                          </center>
+                      </th>
+                  </tr>
+              </table>
           </h6>
         {{pass}}
 
         {{for item in rccLunch:}}
           <h6 v-if="rcc && lunch">
-              <center>
-                  <input id="checkBox" value="{{=item}}" type="checkbox" v-on:click="add_to_cart">
-                    {{=item}}
-                  </input>
-              </center>
+              <table>
+                  <tr>
+                      <th>
+                          <center>
+                              <input id="checkBox" value="{{=item}}" type="checkbox" v-on:click="add_to_cart">
+                                {{=item}}
+                              </input>
+                          </center>
+                      </th>
+                  </tr>
+              </table>
           </h6>
         {{pass}}
 
         {{for item in rccDinner:}}
           <h6 v-if="rcc && dinner">
-              <center>
-                  <input id="checkBox" value="{{=item}}" type="checkbox" v-on:click="add_to_cart">
-                    {{=item}}
-                  </input>
-              </center>
+              <table>
+                  <tr>
+                      <th>
+                          <center>
+                              <input id="checkBox" value="{{=item}}" type="checkbox" v-on:click="add_to_cart">
+                                {{=item}}
+                              </input>
+                          </center>
+                      </th>
+                  </tr>
+              </table>
           </h6>
         {{pass}}
 
