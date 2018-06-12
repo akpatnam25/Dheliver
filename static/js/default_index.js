@@ -106,6 +106,7 @@ var app = function() {
        console.log("HELLO");
        $.post(checkout_url,
          {
+             location: self.vue.location,
              item: item,
              in_cart: in_cart
          },

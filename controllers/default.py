@@ -170,6 +170,7 @@ def checkout():
         item_selected = request.vars.item
         loc = request.vars.location
         time = request.vars.time
+        print item_selected
         db.orderlist.insert(user_email=auth.user.email, dh=loc, times=time, menu_item=item_selected)
         return dict()
 

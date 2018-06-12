@@ -26,11 +26,11 @@
     <h2>Listings</h2>
     {{for ol in orderlists:}}
 
-    {{if ol.dh != None:}}
+
      <div class="memo">
         <div class="memo_text">
           <div class="memo_title">{{=ol.user_email}} from {{=ol.dh}}</div>
-          <div class="memo_content">{{=ol.updated_on}} </div>
+          <div class="memo_content">Requested: {{=ol.menu_item}} on {{=ol.updated_on}} </div>
         </div>
         <div>
           <div class="button_list">
@@ -49,6 +49,6 @@
           </div>
         </div>
       </div>
-{{pass}}
+
     {{pass}}
 </div>
