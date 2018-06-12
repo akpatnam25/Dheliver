@@ -22,12 +22,12 @@
             <div class="buttons">
                    {{if ol.is_public == True:}}
                     <a class="btn rounded" href="{{=URL('default', 'togglePublic', args=[ol.id])}}">
-                          <i class="fa fa-check"></i>
+                          <i class="fa fa-plus"></i>
                     </a>
                  {{pass}}
                 {{if ol.is_public == False:}}
                    <a class="btn rounded" href="{{=URL('default', 'togglePublic', args=[ol.id])}}">
-                          <i class="fa fa-plus"></i>
+                          <i class="fa fa-check"></i>
                     </a>
                  {{pass}}
             </div>
