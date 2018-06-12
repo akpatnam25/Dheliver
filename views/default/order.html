@@ -237,7 +237,12 @@
 
       <div class="login_button">
           <center>
-              <a style="margin-top: 2%" href="{{=URL('default', 'index')}}" class="btn rounded">Pay by Cash</a>
+              <a style="margin-top: 2%" href="{{=URL('default', 'index')}}" class="btn rounded" onclick="cash_popup()">Pay by Cash</a>
+              <script>
+                  function cash_popup() {
+                      alert("Thanks for using Dheliver! Your order will arrive soon! Please pay $5 for the delivery when it arrives!");
+                  }
+              </script>
           </center>
           <center>
               <a style="margin-top: 2%" href="{{=URL('default', 'checkout')}}" class="btn rounded">Pay by Card</a>
