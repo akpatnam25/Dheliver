@@ -1,1 +1,1 @@
-[]
+['chicken noodle soup', 'curly fries', 'lentil & lemon soup', 'steamed rice', 'turkey corn dogs', 'bar pasta', 'cheese ravioli', 'cheesy garlic bread sticks', 'condiments', 'creamy alfredo sauce', 'marinara sauce', 'penne', 'pesto cream sauce', 'dan dan noodles in peanut sauce', 'garlic mashed potatoes', 'oven roasted chicken thigh', 'sauteed seasonal vegetable', 'spicy sonoran meatloaf', 'bbq chicken pizza', 'blt pizza', 'cheese pizza', 'pepperoni pizza']

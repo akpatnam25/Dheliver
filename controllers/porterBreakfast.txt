@@ -1,1 +1,1 @@
-[]
+['breakfast', 'natural bridgestofu scramble', 'cage free omelette bar', 'oatmeal gluten-free', 'steamed rice', 'belgian waffles', 'buttermilk pancakes', 'cage free scrambled eggs', 'country hash browns', 'eggbeaters scramble', 'flour tortilla', 'hard-boiled cage free eggs', 'sausage egg & cheese biscuit', 'sausage patties']

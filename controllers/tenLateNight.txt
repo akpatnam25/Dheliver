@@ -1,1 +1,1 @@
-['oven roasted chicken thigh', 'portobello philly sandwich', 'steak cut fries', 'steamed rice', 'chipotle vegan fajitas', 'condiments', 'fried chicken']
+['baja fish tacos', 'oven roasted chicken thigh', 'pizza asian spicy chicken', 'black beans', 'mexican rice', 'steamed rice', 'bbq tofu chili garlic', 'hawaiian burger bar', 'hawaiian coleslaw', 'hawaiian macaroni salad', 'sticky rice', 'stir fry vegetables']

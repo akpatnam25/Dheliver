@@ -1,1 +1,1 @@
-[]
+['breakfast', 'belgian waffles', 'cage free scrambled eggs', 'coconut syrup', 'hard-boiled cage free eggs', 'natural bridgestofu scramble', 'plantain pancakes', 'roasted yukon gold potatoes', 'sausage links', 'chocolate chip muffin', 'cinnamon roll', 'strawberry almond muffin']

@@ -1,1 +1,1 @@
-['breakfast', 'banana and coconut pancakes', 'biscuit and gravy', 'cage free scrambled eggs', 'hash brown patty', 'natural bridgestofu scramble', 'oatmeal gluten-free', 'sausage patties', 'steamed rice']
+['breakfast', 'cage free scrambled eggs', 'chicken apple sausage', 'natural bridgestofu scramble', 'texas french toast', 'oatmeal gluten-free', "potatoes o'brien", 'steamed rice', 'chocolate chip muffin', 'cinnamon roll', 'strawberry almond muffin', 'vegan granola nut', 'cage free omelette bar']
