@@ -1,12 +1,13 @@
 table {
     border-collapse: collapse;
-    width: 100%;
+    width: auto;
 }
 
 th, td {
-    text-align: left;
+    text-align: center;
     padding: 8px;
     background-color: #87cefa;
+
 }
 
 tr:nth-child(even) {background-color: #00e6ac }
