@@ -1,6 +1,11 @@
-Dheliver
+ Dheliver
 
-Aravind Patnam
-Jonathan Kung
-Srinivasan Rangarajan
-Timesh Patel
+ Aravind Patnam
+ Timesh Patel
+ Srinivasan Rangarajan
+ Jonathan Kung
+
+ 
+Product Summary
+    This web application will allow users to have food delivered from various dining halls at UCSC to their dorm or apartment for a payment. Users will simply navigate to the website and will be asked to enter their login credentials if they have an account. If not they will just create a new account. Users then will be able to select a dining hall from a dropdown menu and enter food that they want into a textbox. Then the user will need to enter their location, either at an on-campus apartment or dorm. Then another user will be able to see the request in a public list and has the option to take up the task and deliver the food.  This is product is perfect for people who are sick, busy, or just simply lazy to get food and eat.
+
