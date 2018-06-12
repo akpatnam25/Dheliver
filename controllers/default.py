@@ -122,7 +122,7 @@ def togglePublic():
          (db.checklist.id == request.args(0)))
     cl = db(q).select().first()
 
-    
+
     redirect(URL('default', 'deliveries'))
 
 
@@ -161,11 +161,17 @@ def about():
 
 def checkout():
 
-    item_selected = request.vars.item
-    loc = request.vars.location
-    time = request.vars.time
-    db.orderlist.insert(user_email=auth.user.email, dh=loc, times=time, menu_item=item_selected)
-    return dict()
+    if request.vars.item == None:
+        return
+    else:
+        print request.vars.item
+        print request.vars.in_cart
+        in_cart = request.vars.in_cart
+        item_selected = request.vars.item
+        loc = request.vars.location
+        time = request.vars.time
+        db.orderlist.insert(user_email=auth.user.email, dh=loc, times=time, menu_item=item_selected)
+        return dict()
 
 
 def faq():
@@ -499,4 +505,3 @@ def getTenLateNight():
     words = finalStr.split("    ")
     words[0] = words[0].replace(" ", "")
     return words
-

@@ -96,21 +96,23 @@ var app = function() {
         }
     };
 
-     self.add_to_cart =function(event){
+     self.add_to_cart = function (event){
        console.log(event.target.value);
        var item = event.target.value;
        var in_cart = event.target.checked;
        console.log(in_cart);
         //self.vue.menu.push()
         //alert(item + ' has been added to the cart')
-         $.post(checkout_url,
-           {
-               item: item
-           },
-        function (data) {
-            self.vue.value = data;
-            self.vue.show = true;
-        })
+       console.log("HELLO");
+       $.post(checkout_url,
+         {
+             item: item,
+             in_cart: in_cart
+         },
+      function (data) {
+          self.vue.value = data;
+          self.vue.show = true;
+      });
 
     };
 
