@@ -162,7 +162,7 @@ def about():
 def checkout():
 
     if request.vars.item == None:
-        return
+        return dict()
     else:
         print request.vars.item
         print request.vars.in_cart
