@@ -6,7 +6,7 @@ table {
 th, td {
     text-align: left;
     padding: 8px;
-    background-color: #39cccc;
+    background-color: #87cefa;
 }
 
 tr:nth-child(even) {background-color: #00e6ac }
